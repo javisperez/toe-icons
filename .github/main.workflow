@@ -4,12 +4,12 @@ workflow "Build and deploy docs" {
 }
 
 action "Build icons files" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  runs = "npm run build"
+  uses = "actions/npm@master"
+  runs = "build"
 }
 
 action "Generate docs" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  runs = "npm run docs"
+  uses = "actions/npm@master"
+  runs = "docs"
   needs = ["Build icons files"]
 }
