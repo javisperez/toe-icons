@@ -5,14 +5,15 @@ export default {
   name: "ui-button",
 
   props: {
-    variant: only(["primary", "secondary"])
+    variant: only(["primary", "secondary"]),
+    href: String
   }
 };
 </script>
 
 <template>
   <div class="ui-button" :class="[`ui-button-${variant}`]">
-    <slot/>
+    <slot />
   </div>
 </template>
 

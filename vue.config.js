@@ -1,9 +1,9 @@
 module.exports = {
-  outputDir: 'docs',
+  outputDir: "docs",
   runtimeCompiler: true,
   productionSourceMap: false,
-  publicPath: '/toe-icons/',
+  publicPath: process.env.NODE_ENV === "production" ? "/toe-icons/" : "/",
   assetsDir: undefined,
   parallel: undefined,
   css: undefined
-}
+};

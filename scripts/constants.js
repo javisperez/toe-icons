@@ -2,10 +2,12 @@ const path = require('path');
 
 const ICONS_DIR = path.resolve(__dirname, '../icons');
 const DIST_DIR = path.resolve(__dirname, '../dist');
+const SRC_DIR = path.resolve(__dirname, '../src');
 
 module.exports = {
   ICONS_DIR,
   DIST_DIR,
+  SRC_DIR,
   SVGO_DEFAULTS: [
     { addAttributesToSVGElement: { attribute: 'fill="currentColor" stroke="currentColor" stroke-width="0"' } },
     { cleanupAttrs: true },
