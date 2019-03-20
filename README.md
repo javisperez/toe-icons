@@ -1,29 +1,12 @@
-# toe-icons
+# TOE ICONS
 
-## Project setup
-```
-yarn install
-```
+https://javisperez.github.io/toe-icons
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## About this
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+This is a free open small icons library made with Affinity Designer.
 
-### Run your tests
-```
-yarn run test
-```
+## About me
 
-### Lints and fixes files
-```
-yarn run lint
-```
+I'm no designer, I'm a frontend developer, I just need some specific icons that i decided to do myself for learning purpose mostly :)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
