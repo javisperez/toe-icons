@@ -29,7 +29,7 @@
   "readme": "README.md",
   "license": "MIT",
   "dependencies": {
-    "vue": "^2.6.6",
+    "vue": "^2.6.6"
   },
   "devDependencies": {
     "vue-router": "^3.0.1",
