@@ -14,6 +14,15 @@ export default new Router({
       component: Home
     },
     {
+      path: "/icons",
+      redirectTo: "/"
+    },
+    {
+      path: "/icons/:icon",
+      name: "home-icon",
+      component: Home
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

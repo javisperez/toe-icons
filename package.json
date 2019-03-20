@@ -4,10 +4,34 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "docs": "vue-cli-service build",
+    "build": "node ./scripts/build",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/icons.json",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javisperez/toe-icons.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "toe",
+    "icons",
+    "plugin"
+  ],
+  "author": {
+    "name": "Javis Pérez",
+    "email": "javisperez@gmail.com"
+  },
+  "readme": "README.md",
+  "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "tailwindcss": "^0.7.4",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1"
   },
