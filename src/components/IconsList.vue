@@ -3,6 +3,8 @@ import iconsList from "../../dist/icons.json";
 import iconsTags from "../../dist/icons-tags.json";
 import IconPreview from "./IconPreview.vue";
 
+const VERSION = require("../../package.json").version;
+
 export default {
   name: "icons-list",
 
@@ -16,7 +18,8 @@ export default {
 
   data() {
     return {
-      iconsList
+      iconsList,
+      version: VERSION
     };
   },
 
@@ -59,9 +62,16 @@ export default {
 
 <template>
   <div class="icons-list">
-    <h4>
-      <span v-if="filterBy">Showing {{ Object.keys(filteredIcons).length }} of</span>
-      {{ Object.keys(iconsList).length }} icons available
+    <h4 class="flex justify-between items-center">
+      <span>
+        <span v-if="filterBy"
+          >Showing {{ Object.keys(filteredIcons).length }} of</span
+        >
+        {{ Object.keys(iconsList).length }} icons available
+      </span>
+      <span class="text-sm text-black md:text-grey-light hover:text-black"
+        >latest version: {{ version }}</span
+      >
     </h4>
     <div class="flex flex-wrap flex-col md:flex-row">
       <div
@@ -74,7 +84,7 @@ export default {
             :to="'/icons/' + icon"
             class="no-underline text-grey-darker hover:text-black"
           >
-            <IconPreview :type="icon"/>
+            <IconPreview :type="icon" />
           </router-link>
         </div>
       </div>
@@ -85,7 +95,6 @@ export default {
 <style scooped>
 .icon-preview {
   box-sizing: border-box;
-  transition: width 0.4s;
 }
 
 .icon-preview:first-child,

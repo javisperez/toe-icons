@@ -34,9 +34,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   npm version $VERSION --no-git-tag-version
 
   # build
+  echo "Building..."
   npm run build
 
   # generate the git tag
+  echo "Tagging..."
   git tag v$VERSION
 
   # commit
@@ -44,7 +46,16 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   git commit -m "[build] $VERSION"
 
   # publish
+  echo "Pushing..."
   git push origin refs/tags/v$VERSION
   git push
+
+  echo "Publishing to NPM..."
   npm publish
+
+  # update the docs
+  echo "Updating the docs..."
+  npm run docs
+
+  echo "All done, now remember to add the release information on the github repo: https://github.com/javisperez/toe-icons/releases"
 fi

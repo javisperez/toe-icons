@@ -12,14 +12,26 @@ export default {
 </script>
 
 <template>
-  <div class="ui-button" :class="[`ui-button-${variant}`]">
-    <slot />
+  <div
+    class="ui-button"
+    :class="[`ui-button-${variant}`, href ? 'ui-button-link' : '']"
+  >
+    <a :href="href" class="no-underline text-white" v-if="href">
+      <slot />
+    </a>
+
+    <slot v-else />
   </div>
 </template>
 
 <style>
 .ui-button {
-  @apply .px-4 .py-2 .rounded-lg .text-base .flex .items-center;
+  @apply .px-4 .py-2 .rounded-lg;
+}
+
+.ui-button,
+.ui-button a {
+  @apply .flex .text-base .items-center;
   box-sizing: border-box;
 }
 

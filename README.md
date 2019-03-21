@@ -4,7 +4,7 @@ https://javisperez.github.io/toe-icons
 
 ## About this
 
-This is a free open small icons library made with Affinity Designer.
+This is a free, open source, small icons library made with Affinity Designer.
 
 ## About me
 

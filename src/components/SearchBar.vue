@@ -22,7 +22,7 @@ export default {
 <template>
   <div class="search-bar-container">
     <div class="bg-white shadow rounded flex items-center">
-      <ti-search class="mr-2 py-4 pl-4"/>
+      <ti-search class="mr-2 py-4 pl-4" />
       <input
         class="h-full border-none block outline-none flex-auto text-base py-4"
         type="text"
@@ -31,9 +31,13 @@ export default {
         :value="value"
         @input="onSearch"
         placeholder="Search icons..."
+      />
+      <span
+        @click="clearSearch"
+        class="ml-2 py-4 pr-4 cursor-pointer"
+        v-show="value"
       >
-      <span @click="clearSearch" class="ml-2 py-4 pr-4 cursor-pointer" v-show="value">
-        <ti-times size="18" class="align-middle"/>
+        <ti-times size="18" class="align-middle" />
       </span>
     </div>
   </div>
