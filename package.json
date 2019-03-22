@@ -1,6 +1,6 @@
 {
   "name": "toe-icons",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "scripts": {
     "serve": "vue-cli-service serve",
     "docs": "vue-cli-service build",
