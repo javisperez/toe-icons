@@ -2,17 +2,17 @@
   <div id="app" class="p-4 container">
     <div id="nav" class="flex border-b-2 border-blue-dark mb-8">
       <h1 class="m-0 text-base uppercase flex items-center">
-        <ti-toe size="24" class="mr-1 text-cyan"/>Toe Icons
+        <ti-toe size="24" class="mr-1 text-cyan" />Toe Icons
       </h1>
       <a
         href="https://www.github.com/javisperez/toe-icons"
         class="flex items-center no-underline hover:underline ml-auto"
       >
-        <ti-github size="18" class="mr-1"/>Github
+        <ti-github size="18" class="mr-1" />Github
       </a>
     </div>
 
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
