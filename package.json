@@ -4,10 +4,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "docs": "vue-cli-service build",
-    "build": "node ./scripts/build",
+    "build": "node ./scripts/build && cp -rf package.json dist",
     "lint": "vue-cli-service lint"
   },
-  "main": "dist/icons.json",
+  "main": "dist/components.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/javisperez/toe-icons.git"

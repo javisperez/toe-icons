@@ -41,7 +41,7 @@ module.exports = () => {
           )}.svg`;
           const newSizeRatio = Math.round((data.length / svg.length) * 100);
 
-          log(`Processing ${chalk.blue(toFile)}:`);
+          log(` > Processing ${chalk.blue(toFile)}:`);
           log(
             `    ${(svg.length / 1024).toFixed(2)}kb ${chalk.yellow(">")} ${(
               data.length / 1024

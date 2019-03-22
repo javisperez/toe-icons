@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <path id="caret-down" d="M50.573,17.939l5.321,5.321l-23.842,23.843l-23.946,-23.946l5.321,-5.321l18.625,18.624l18.521,-18.521Z"/>
+    <path id="caret-down" d="M32,45.762l-24.071,-24.07l3.009,-3.009l21.062,21.062l21.062,-21.062l3.009,3.009l-24.071,24.07Z" style="fill-rule:nonzero;"/>
 </svg>

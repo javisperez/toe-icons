@@ -1,15 +1,11 @@
 import icons from "../../dist/icons.json";
 
 const generateComponents = options => {
-  const defaults = {
+  const localOptions = {
     size: 24,
     stroke: 0,
     color: "currentColor",
-    strokeColor: "currentColor"
-  };
-
-  const localOptions = {
-    ...defaults,
+    strokeColor: "currentColor",
     ...options
   };
 
@@ -42,12 +38,13 @@ const generateComponents = options => {
   // Definition of component per icon
   Object.keys(icons).forEach(icon => {
     const name = `ti-${icon}`;
+    const camelCaseName = name.replace(/(-\w)/g, m => m[1].toUpperCase());
 
-    components[name] = {
-      name,
+    components[camelCaseName] = {
+      name: camelCaseName,
       props,
       template: `
-      <svg xmlns="http://www.w3.org/2000/svg" class="ti ti-${icon}"
+      <svg xmlns="http://www.w3.org/2000/svg" class="toe-icon ti ti-${icon}"
         :class="{'spin': spin}" :width="size" :height="size"
         viewBox="0 0 64 64" :fill="color" :stroke="strokeColor"
         :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round">

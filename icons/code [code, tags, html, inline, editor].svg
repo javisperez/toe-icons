@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <path id="code" d="M21.555,23.108l1.371,3.1l-11.49,5.223l11.49,5.223l-1.371,3.101l-14.004,-6.561l0,-3.526l14.004,-6.56Z" style="fill-rule:nonzero;"/>
-    <path d="M34.252,18.897l3.885,1.338l-8.226,25.004l-3.884,-1.404l8.225,-24.938Z" style="fill-rule:nonzero;"/>
-    <path d="M56.449,29.668l0,3.526l-14.004,6.561l-1.371,-3.101l11.49,-5.223l-11.49,-5.223l1.371,-3.1l14.004,6.56Z" style="fill-rule:nonzero;"/>
+    <g id="code" transform="matrix(0.488286,0,0,0.488286,-450.89,-4.07473)">
+        <path d="M948.853,72.839l21.417,8.132l0,8.821l-30.384,-13.541l0,-7.006l30.384,-13.504l0,8.821l-21.417,8.277Z" style="fill-rule:nonzero;"/>
+        <path d="M981.73,99.852l-6.275,0l18.825,-51.943l6.276,0l-18.826,51.943Z" style="fill-rule:nonzero;"/>
+        <path d="M1029.08,72.658l-22.434,-8.241l0,-8.676l31.364,13.504l0,7.006l-31.364,13.504l0,-8.676l22.434,-8.421Z" style="fill-rule:nonzero;"/>
+    </g>
 </svg>

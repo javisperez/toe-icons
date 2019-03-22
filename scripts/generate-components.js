@@ -6,7 +6,7 @@ const { SRC_DIR, DIST_DIR } = require("./constants");
 
 function generateVueComponents() {
   fs.readFile(
-    path.resolve(SRC_DIR, "components", "ToeIcons.js"),
+    path.resolve(SRC_DIR, "plugins", "VueComponents.js"),
     "utf8",
     (err, data) => {
       if (err) {
@@ -16,7 +16,7 @@ function generateVueComponents() {
       const result = data.replace("../../dist/", "./");
 
       fs.writeFile(
-        path.resolve(DIST_DIR, "ToeIcons.js"),
+        path.resolve(DIST_DIR, "VueComponents.js"),
         result,
         "utf8",
         err => {
@@ -30,6 +30,6 @@ function generateVueComponents() {
 }
 
 module.exports = () => {
-  console.log(chalk.white('Generating'), chalk.green('Vue'), chalk.white('components'));
+  console.log(chalk.white(' > Generating'), chalk.green('Vue'), chalk.white('components'));
   generateVueComponents();
 };

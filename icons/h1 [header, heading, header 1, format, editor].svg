@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
     <g id="H1">
-        <path d="M56.568,55.954l-3.306,0l0,-15.966l-4.876,1.666l0,-2.8l7.758,-2.855l0.424,0l0,19.955Z" style="fill-rule:nonzero;"/>
-        <path d="M45.588,55.954l-8.318,0l0,-21.355l-21.487,0l0,21.355l-8.351,0l0,-48.057l8.351,0l0,20.002l21.487,0l0,-20.002l8.318,0l0,48.057Z" style="fill-rule:nonzero;"/>
+        <path d="M55.931,55.977l-2.484,0l0,-11.999l-3.664,1.252l0,-2.104l5.83,-2.145l0.318,0l0,14.996Z" style="fill-rule:nonzero;"/>
+        <path d="M44.977,55.954l-6.37,0l0,-22.213l-24.227,0l0,22.213l-6.337,0l0,-48.057l6.337,0l0,20.662l24.227,0l0,-20.662l6.37,0l0,48.057Z" style="fill-rule:nonzero;"/>
     </g>
 </svg>

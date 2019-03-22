@@ -1,5 +1,6 @@
 const fs = require("fs");
 const chalk = require("chalk");
+
 const { ICONS_DIR, DIST_DIR } = require("./constants");
 
 const optimizeIcons = require("./optimize");
@@ -14,25 +15,22 @@ if (!fs.existsSync(DIST_DIR)) {
 }
 
 log(
-  chalk.white.bold(`1. Optimizing SVG's in ${chalk.blue.bold(ICONS_DIR)}...`)
+  chalk.white.bold(`Optimizing SVG's in ${chalk.blue.bold(ICONS_DIR)}...`)
 );
 
 optimizeIcons().then(() => {
-  log("---");
 
-  log(chalk.white.bold("2. Generating"), chalk.blue.bold("icons-tags.json"));
-  log("---");
+  log(chalk.white.bold("Generating"), chalk.blue.bold("icons-tags.json"));
 
   generateTags();
 
-  log(chalk.white.bold("3. Generating"), chalk.blue.bold("icons.json"));
-  log("---");
+  log(chalk.white.bold("Generating"), chalk.blue.bold("icons.json"));
 
   generateContent();
 
-  log(chalk.white.bold("4. Generating Components..."));
+  log(chalk.white.bold("Generating Components..."));
 
   generateComponents();
 
-  log("---");
+  log("")
 });
