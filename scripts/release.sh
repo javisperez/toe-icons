@@ -58,5 +58,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Updating the docs..."
   npm run docs
 
-  echo "All done, now remember to add the release information on the github repo: https://github.com/javisperez/toe-icons/releases"
+  echo "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
+  echo "* All done!, now remember to add the release information on the github repo:  *"
+  echo "*           https://github.com/javisperez/toe-icons/releases                  *"
+  echo "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
 fi
