@@ -51,6 +51,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   git push
 
   echo "Publishing to NPM..."
+  cd ./dist
   npm publish
 
   # update the docs
