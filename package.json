@@ -5,7 +5,8 @@
     "serve": "vue-cli-service serve",
     "docs": "vue-cli-service build",
     "build": "node ./scripts/build && cp -rf package.json dist",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "release": "./scripts/release.sh"
   },
   "main": "dist/components.js",
   "repository": {
