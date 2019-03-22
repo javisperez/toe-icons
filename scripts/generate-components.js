@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const chalk = require('chalk');
+const chalk = require("chalk");
 
 const { SRC_DIR, DIST_DIR } = require("./constants");
 
@@ -16,7 +16,7 @@ function generateVueComponents() {
       const result = data.replace("../../dist/", "./");
 
       fs.writeFile(
-        path.resolve(DIST_DIR, "VueComponents.js"),
+        path.resolve(DIST_DIR, "components.js"),
         result,
         "utf8",
         err => {
@@ -30,6 +30,10 @@ function generateVueComponents() {
 }
 
 module.exports = () => {
-  console.log(chalk.white(' > Generating'), chalk.green('Vue'), chalk.white('components'));
+  console.log(
+    chalk.white(" > Generating"),
+    chalk.green("Vue"),
+    chalk.white("components")
+  );
   generateVueComponents();
 };
