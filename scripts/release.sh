@@ -56,6 +56,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   # update the docs
   echo "Updating the docs..."
+  cd ..
   npm run docs
 
   echo "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"
