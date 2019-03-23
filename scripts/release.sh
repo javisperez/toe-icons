@@ -51,6 +51,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   git push
 
   echo "Publishing to NPM..."
+  sed 's#"main": "./dist/components.js",#"main": "./components.js",#' package.json > ./dist/package.json
+
   cd ./dist
   npm publish
 
