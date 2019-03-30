@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <g id="Underline" transform="matrix(0.860161,0,0,0.863401,-146.998,0.561267)">
-        <path d="M225.292,8.496l0,32.3c-0.022,4.481 -1.43,8.146 -4.225,10.995c-2.795,2.85 -6.585,4.448 -11.37,4.796l-1.664,0.066c-5.199,0 -9.342,-1.403 -12.431,-4.209c-3.089,-2.806 -4.655,-6.667 -4.698,-11.583l0,-32.365l6.199,0l0,32.17c0,3.436 0.946,6.106 2.838,8.009c1.893,1.904 4.59,2.855 8.092,2.855c3.545,0 6.258,-0.946 8.14,-2.838c1.881,-1.893 2.822,-4.557 2.822,-7.994l0,-32.202l6.297,0Z" style="fill-rule:nonzero;"/>
-        <rect x="186.336" y="60.894" width="43.328" height="3.263"/>
-    </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><g id="Underline" transform="matrix(0.860161,0,0,0.863401,-146.998,0.561267)"><text x="186.336px" y="56px" style="font-family:'Roboto-Regular', 'Roboto';font-size:66.819px;">U</text><rect x="186.336" y="60.894" width="43.328" height="3.263"/></g></svg>
