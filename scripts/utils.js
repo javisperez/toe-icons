@@ -7,17 +7,17 @@ const utils = {
     return string.slice(from, to);
   },
 
-  sanitizeIconName: (svgFile, includeExtension = true) => `${
-      utils
-        .sliceOrComplete(
-          svgFile.replace(/\.svg$/ig, ''), 0, svgFile.indexOf(' ')
-        )
-    }${includeExtension ? '.svg' : ''}`,
+  sanitizeIconName: (svgFile, includeExtension = true) =>
+    `${utils.sliceOrComplete(
+      svgFile.replace(/\.svg$/gi, ""),
+      0,
+      svgFile.indexOf(" ")
+    )}${includeExtension ? ".svg" : ""}`,
 
   getTagsFromIconName(svgFile) {
-    const [,match] = /\[(.+?)\]/ig.exec(svgFile) || [null, '']
-    return match.split(',').map(s => s.trim());
-  },
-}
+    const [, match] = /\[(.+?)\]/gi.exec(svgFile) || [null, ""];
+    return match.split(",").map(s => s.trim());
+  }
+};
 
 module.exports = utils;
