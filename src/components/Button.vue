@@ -1,12 +1,12 @@
 <script>
-const only = values => ({ validator: value => values.indexOf(value) > -1 });
+import VueTypes from "vue-types";
 
 export default {
   name: "ui-button",
 
   props: {
-    variant: only(["primary", "secondary"]),
-    href: String
+    variant: VueTypes.oneOf(["primary", "secondary"]).required,
+    href: VueTypes.string.required
   }
 };
 </script>
@@ -24,7 +24,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .ui-button {
   @apply .px-4 .py-2 .rounded-lg;
 }
@@ -38,7 +38,6 @@ export default {
 .ui-button-primary {
   @apply .bg-blue .text-white .cursor-pointer .font-bold;
 }
-
 .ui-button-primary:hover {
   @apply .bg-blue-dark;
 }
@@ -46,8 +45,7 @@ export default {
 .ui-button-secondary {
   @apply .border-2 .border-grey-dark .border-solid .text-grey-dark .cursor-pointer .font-bold;
 }
-
-.ui-button-secondary:hover {
+.ui-buton-secondary:hover {
   @apply .bg-grey-lighter .text-black;
 }
 </style>

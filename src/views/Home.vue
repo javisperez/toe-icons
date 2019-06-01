@@ -1,10 +1,10 @@
 <script>
-import SearchBar from "../components/SearchBar.vue";
-import IconsList from "../components/IconsList.vue";
-import IconDetail from "../components/IconDetail.vue";
 import Button from "../components/Button.vue";
+import IconsList from "../components/IconsList.vue";
+import SearchBar from "../components/SearchBar.vue";
+import IconDetailModal from "../components/IconDetailModal.vue";
 
-const VERSION = require("../../package.json").version;
+const { version: VERSION } = require("../../package.json");
 
 export default {
   name: "home",
@@ -13,7 +13,7 @@ export default {
     Button,
     SearchBar,
     IconsList,
-    IconDetail
+    IconDetailModal
   },
 
   data() {
@@ -37,7 +37,7 @@ export default {
       <strong>Toe Icons</strong> is a free basic icons library.
       <div class="flex justify-center max-w-sm mx-auto mt-8">
         <Button variant="primary" :href="downloadLink">
-          <ti-download />Download
+          <TiDownload />Download
         </Button>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
 
     <!-- Modal -->
     <transition name="fade">
-      <IconDetail v-if="activeIcon" :icon="activeIcon" />
+      <IconDetailModal v-if="activeIcon" :icon="activeIcon" />
     </transition>
   </div>
 </template>

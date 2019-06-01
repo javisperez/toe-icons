@@ -1,12 +1,13 @@
 import icons from "../../dist/icons.json";
+import PropTypes from "vue-types";
 
-const generateComponents = options => {
-  const localOptions = {
+const generateComponents = args => {
+  const options = {
     size: 24,
     stroke: 0,
     color: "currentColor",
     strokeColor: "currentColor",
-    ...options
+    ...args
   };
 
   // The base component
@@ -14,12 +15,12 @@ const generateComponents = options => {
     name: "ti",
 
     props: {
-      icon: { type: String, required: true },
-      size: { default: localOptions.size },
-      spin: { type: Boolean, default: false },
-      color: { default: localOptions.color },
-      stroke: { default: localOptions.stroke },
-      strokeColor: { default: localOptions.strokeColor }
+      icon: PropTypes.string.isRequired,
+      size: PropTypes.oneOfType([String, Number]).def(options.size),
+      spin: PropTypes.bool.def(false),
+      color: PropTypes.string.def(options.color),
+      stroke: PropTypes.oneOfType([String, Number]).def(options.stroke),
+      strokeColor: PropTypes.string.def(options.strokeColor)
     },
 
     template: `<svg :is="'ti-'+icon" :size="size" :stroke="stroke" :color="color" :stroke-color="strokeColor" :spin="spin"></svg>`
@@ -37,11 +38,12 @@ const generateComponents = options => {
 
   // Definition of component per icon
   Object.keys(icons).forEach(icon => {
-    const name = `ti-${icon}`;
-    const camelCaseName = name.replace(/(-\w)/g, m => m[1].toUpperCase());
+    const titleCaseName = `Ti-${icon}`.replace(/(-\w)/g, m =>
+      m[1].toUpperCase()
+    );
 
-    components[camelCaseName] = {
-      name: camelCaseName,
+    components[titleCaseName] = {
+      name: titleCaseName,
       props,
       template: `
       <svg xmlns="http://www.w3.org/2000/svg" class="toe-icon ti ti-${icon}"

@@ -1,10 +1,12 @@
 <script>
+import PropTypes from "vue-types";
+
 export default {
   name: "icon-preview",
 
   props: {
-    type: String,
-    active: Boolean
+    type: PropTypes.string.isRequired,
+    active: PropTypes.bool.def(false)
   }
 };
 </script>
