@@ -1,22 +1,30 @@
-<script>
+<script lang="ts">
+import Vue from "vue";
 import iconsTags from "../../dist/icons-tags.json";
+import { IconTags } from "./IconsList.vue";
 
-export default {
+type State = {
+  tags: string[];
+  isRotating: boolean;
+};
+
+export default Vue.extend({
   name: "icon-detail",
 
   props: {
     icon: String
   },
 
-  data() {
+  data(): State {
     const { icon } = this;
+    const tags = (iconsTags as IconTags)[icon];
 
     return {
-      tags: iconsTags[icon],
+      tags,
       isRotating: false
     };
   }
-};
+});
 </script>
 
 <template>

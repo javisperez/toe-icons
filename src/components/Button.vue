@@ -1,22 +1,31 @@
-<script>
-import VueTypes from "vue-types";
+<script lang="ts">
+import Vue, { PropType } from "vue";
 
-export default {
+type Variant = "primary" | "secondary";
+
+export default Vue.extend({
   name: "ui-button",
 
   props: {
-    variant: VueTypes.oneOf(["primary", "secondary"]).required,
-    href: VueTypes.string.required
+    variant: String as PropType<Variant>,
+    href: {
+      type: String,
+      required: true
+    }
   }
-};
+});
 </script>
 
 <template>
   <div
-    class="ui-button"
+    class="ui-button px-4 py-2 rounded-lg flex text-base items-center"
     :class="[`ui-button-${variant}`, href ? 'ui-button-link' : '']"
   >
-    <a :href="href" class="no-underline text-white" v-if="href">
+    <a
+      :href="href"
+      class="no-underline text-white flex text-base items-center"
+      v-if="href"
+    >
       <slot />
     </a>
 
@@ -25,13 +34,8 @@ export default {
 </template>
 
 <style scoped>
-.ui-button {
-  @apply .px-4 .py-2 .rounded-lg;
-}
-
 .ui-button,
 .ui-button a {
-  @apply .flex .text-base .items-center;
   box-sizing: border-box;
 }
 

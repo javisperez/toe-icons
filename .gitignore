@@ -21,3 +21,6 @@ yarn-error.log*
 *.sln
 *.sw*
 .history
+
+# Icons source file
+*.afdesign

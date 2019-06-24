@@ -3,7 +3,7 @@ const path = require("path");
 const Svgo = require("svgo");
 const chalk = require("chalk");
 const { SVGO_DEFAULTS, ICONS_DIR, DIST_DIR } = require("./constants");
-const { sanitizeIconName, deleteFolder } = require("./utils");
+const { sanitizeIconName } = require("./utils");
 
 const { log } = console;
 
@@ -53,7 +53,15 @@ module.exports = () => {
           );
           log("");
 
-          fs.writeFileSync(path.join(DIST_ICONS_DIR, toFile), data);
+          const cleanSvgData = data
+            .replace(/fill="#d9d9d9"/g, 'style="opacity: 0.15"')
+            .replace(/fill="#b3b3b3"/g, 'style="opacity: 0.30"')
+            .replace(/fill="#8c8c8c"/g, 'style="opacity: 0.45"')
+            .replace(/fill="#666"/g, 'style="opacity: 0.60"')
+            .replace(/fill="#404040"/g, 'style="opacity: 0.75"')
+            .replace(/<path fill="none" d="M[a-z 0-9-]+v800H[0-9-]+z"\/?>(<\/path>)?/gi, '');
+
+          fs.writeFileSync(path.join(DIST_ICONS_DIR, toFile), cleanSvgData);
         })
         .catch(error => {
           console.error(`Error: ${svgFile} failed, ${error}`);

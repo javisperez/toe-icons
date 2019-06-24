@@ -1,19 +1,20 @@
-<script>
+<script lang="ts">
+import Vue from "vue";
 import Button from "../components/Button.vue";
 import IconsList from "../components/IconsList.vue";
 import SearchBar from "../components/SearchBar.vue";
-import IconDetailModal from "../components/IconDetailModal.vue";
+import IconModal from "../components/IconModal.vue";
 
 const { version: VERSION } = require("../../package.json");
 
-export default {
+export default Vue.extend({
   name: "home",
 
   components: {
     Button,
     SearchBar,
     IconsList,
-    IconDetailModal
+    IconModal
   },
 
   data() {
@@ -24,11 +25,11 @@ export default {
   },
 
   computed: {
-    activeIcon() {
+    activeIcon(): string {
       return this.$route.params.icon;
     }
   }
-};
+});
 </script>
 
 <template>
@@ -48,7 +49,7 @@ export default {
 
     <!-- Modal -->
     <transition name="fade">
-      <IconDetailModal v-if="activeIcon" :icon="activeIcon" />
+      <IconModal v-if="activeIcon" :icon="activeIcon" />
     </transition>
   </div>
 </template>

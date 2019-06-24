@@ -1,11 +1,18 @@
-<script>
+<script lang="ts">
+import Vue from "vue";
+import { IconData, IconTags, EmptyObject } from "../types";
 import iconsList from "../../dist/icons.json";
 import iconsTags from "../../dist/icons-tags.json";
 import IconPreview from "./IconPreview.vue";
 
 const VERSION = require("../../package.json").version;
 
-export default {
+type State = {
+  iconsList: IconData;
+  version: string;
+};
+
+export default Vue.extend({
   name: "icons-list",
 
   props: {
@@ -16,7 +23,7 @@ export default {
     IconPreview
   },
 
-  data() {
+  data(): State {
     return {
       iconsList,
       version: VERSION
@@ -24,27 +31,30 @@ export default {
   },
 
   methods: {
-    isMatch(icon) {
+    isMatch(icon: string): boolean {
       if (!this.filterBy) {
         return true;
       }
 
-      const terms = this.filterBy.split(" ").map(w => w.toLowerCase());
-      const tags = iconsTags[icon];
+      const terms: string[] = this.filterBy
+        .split(" ")
+        .map(w => w.toLowerCase());
+      const tags: string[] = (iconsTags as IconTags)[icon];
 
       return terms.some(
-        term => icon.includes(term) || tags.some(t => t.includes(term))
+        (term: string) =>
+          icon.includes(term) || tags.some((t: string) => t.includes(term))
       );
     },
 
-    isActive(icon) {
+    isActive(icon: string): boolean {
       return this.$route.params.icon === icon;
     }
   },
 
   computed: {
-    filteredIcons() {
-      const filteredValues = {};
+    filteredIcons(): object {
+      const filteredValues: {} = {};
       const { iconsList, isMatch } = this;
       for (const icon in iconsList) {
         if (!isMatch(icon)) {
@@ -57,7 +67,7 @@ export default {
       return filteredValues;
     }
   }
-};
+});
 </script>
 
 <template>

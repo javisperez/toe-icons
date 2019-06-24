@@ -14,9 +14,7 @@ if (!fs.existsSync(DIST_DIR)) {
   fs.mkdirSync(DIST_DIR);
 }
 
-log(
-  chalk.white.bold(`Optimizing SVG's in ${chalk.blue.bold(ICONS_DIR)}...`)
-);
+log(chalk.white.bold(`Optimizing SVG's in ${chalk.blue.bold(ICONS_DIR)}...`));
 
 optimizeIcons().then(() => {
 

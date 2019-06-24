@@ -1,14 +1,17 @@
-<script>
-import PropTypes from "vue-types";
+<script lang="ts">
+import Vue from "vue";
 
-export default {
+export default Vue.extend({
   name: "icon-preview",
 
   props: {
-    type: PropTypes.string.isRequired,
-    active: PropTypes.bool.def(false)
+    type: {
+      type: String,
+      required: true
+    },
+    active: Boolean
   }
-};
+});
 </script>
 
 <template>

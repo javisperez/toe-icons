@@ -9,7 +9,11 @@ module.exports = {
   DIST_DIR,
   SRC_DIR,
   SVGO_DEFAULTS: [
-    { addAttributesToSVGElement: { attribute: 'fill="currentColor" stroke="currentColor" stroke-width="0"' } },
+    {
+      addAttributesToSVGElement: {
+        attribute: 'fill="currentColor" stroke="currentColor" stroke-width="0"'
+      }
+    },
     { cleanupAttrs: true },
     { removeDoctype: true },
     { removeXMLProcInst: true },
