@@ -1,13 +1,7 @@
 import _Vue from "vue";
 import icons from "../../dist/icons.json";
 
-import {
-  IconData,
-  IconsList,
-  BasicComponent,
-  EmptyObject,
-  MultiLevelObject
-} from "../types";
+import { IconData, EmptyObject, MultiLevelObject } from "../types";
 
 type TiComponentOptions =
   | {

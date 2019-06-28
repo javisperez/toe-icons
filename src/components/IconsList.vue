@@ -1,11 +1,16 @@
 <script lang="ts">
 import Vue from "vue";
-import { IconData, IconTags, EmptyObject } from "../types";
+import IconPreview from "./IconPreview.vue";
 import iconsList from "../../dist/icons.json";
 import iconsTags from "../../dist/icons-tags.json";
-import IconPreview from "./IconPreview.vue";
 
 const VERSION = require("../../package.json").version;
+
+// @TODO these types should be imported from the `types.ts` file but vue-cli doesnt like mixing `.ts` with `.vue` atm
+type EmptyObject = { [key: string]: never };
+type IconTags = { [key: string]: string[] };
+type IconData = { [key: string]: string };
+type MultiLevelObject = { [key: string]: {} };
 
 type State = {
   iconsList: IconData;
@@ -54,7 +59,7 @@ export default Vue.extend({
 
   computed: {
     filteredIcons(): object {
-      const filteredValues: {} = {};
+      const filteredValues: MultiLevelObject = {};
       const { iconsList, isMatch } = this;
       for (const icon in iconsList) {
         if (!isMatch(icon)) {
@@ -74,14 +79,12 @@ export default Vue.extend({
   <div class="icons-list">
     <h4 class="flex justify-between items-center">
       <span>
-        <span v-if="filterBy"
-          >Showing {{ Object.keys(filteredIcons).length }} of</span
-        >
+        <span v-if="filterBy">Showing {{ Object.keys(filteredIcons).length }} of</span>
         {{ Object.keys(iconsList).length }} icons available
       </span>
-      <span class="text-sm text-black md:text-grey-light hover:text-black"
-        >latest version: {{ version }}</span
-      >
+      <span
+        class="text-sm text-black md:text-grey-light hover:text-black"
+      >latest version: {{ version }}</span>
     </h4>
     <div class="flex flex-wrap flex-col md:flex-row">
       <div
@@ -94,7 +97,7 @@ export default Vue.extend({
             :to="'/icons/' + icon"
             class="no-underline text-grey-darker hover:text-black"
           >
-            <IconPreview :type="icon" />
+            <IconPreview :type="icon"/>
           </router-link>
         </div>
       </div>

@@ -1,10 +1,12 @@
 <script lang="ts">
 import Vue from "vue";
-import iconsTags from "../../dist/icons-tags.json";
-import { IconTags } from "./IconsList.vue";
 import IconModalTabs from "./IconModalTabs.vue";
 import IconModalAbout from "./IconModalAbout.vue";
+import iconsTags from "../../dist/icons-tags.json";
 import IconModalPlayground from "./IconModalPlayground.vue";
+
+// @TODO these types should be imported from 'types.ts'
+type IconTags = { [key: string]: string[] };
 
 type State = {
   tags: string[];
@@ -33,7 +35,7 @@ export default Vue.extend({
   },
 
   computed: {
-    isPlayground() {
+    isPlayground(): boolean {
       return this.$route.params.tab === "playground";
     }
   }

@@ -9,7 +9,7 @@ export default Vue.extend({
   },
 
   computed: {
-    isPlayground() {
+    isPlayground(): boolean {
       return this.$route.params.tab === "playground";
     }
   }
