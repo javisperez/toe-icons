@@ -1,27 +1,7 @@
-import _Vue from "vue";
 import icons from "../../dist/icons.json";
 
-import { IconData, EmptyObject, MultiLevelObject } from "../types";
-
-type TiComponentOptions =
-  | {
-      size: number;
-      stroke: number;
-      color: string;
-      strokeColor: string;
-    }
-  | EmptyObject;
-
-type Props = {
-  icon: {};
-  size: {};
-  spin: {};
-  stroke: {};
-  color: {};
-  strokeColor: {};
-};
-
-const generateComponents = (args: TiComponentOptions) => {
+// @TODO convert this to typescript and update the `./scripts/generate-components.js` script to compile it
+const generateComponents = args => {
   const options = {
     size: 24,
     stroke: 0,
@@ -65,16 +45,16 @@ const generateComponents = (args: TiComponentOptions) => {
   };
 
   // All the rest of components
-  const components: MultiLevelObject = { ti };
+  const components = { ti };
 
   // Same props as the global `fi`
-  const props: Props = { ...ti.props };
+  const props = { ...ti.props };
 
   delete props.icon;
 
   // Definition of component per icon
-  Object.keys(icons as IconData).forEach((icon: string) => {
-    const titleCaseName: string = `Ti-${icon}`.replace(/(-\w)/g, m =>
+  Object.keys(icons).forEach(icon => {
+    const titleCaseName = `Ti-${icon}`.replace(/(-\w)/g, m =>
       m[1].toUpperCase()
     );
 
@@ -86,7 +66,7 @@ const generateComponents = (args: TiComponentOptions) => {
         :class="{'spin': spin}" :width="size" :height="size"
         viewBox="0 0 64 64" :fill="color" :stroke="strokeColor"
         :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round">
-        ${(icons as IconData)[icon]}
+        ${icons[icon]}
       </svg>
       `
     };
@@ -96,11 +76,9 @@ const generateComponents = (args: TiComponentOptions) => {
 };
 
 export default {
-  install(Vue: typeof _Vue, options: TiComponentOptions = {}): void {
-    Vue.mixin(
-      _Vue.extend({
-        components: generateComponents(options)
-      })
-    );
+  install(Vue, options = {}) {
+    Vue.mixin({
+      components: generateComponents(options)
+    });
   }
 };

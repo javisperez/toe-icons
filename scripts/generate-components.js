@@ -6,7 +6,7 @@ const { SRC_DIR, DIST_DIR } = require("./constants");
 
 function generateVueComponents() {
   fs.readFile(
-    path.resolve(SRC_DIR, "plugins", "VueComponents.ts"),
+    path.resolve(SRC_DIR, "plugins", "VueComponents.js"),
     "utf8",
     (err, data) => {
       if (err) {
