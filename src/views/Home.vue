@@ -25,7 +25,7 @@ export default Vue.extend({
   },
 
   computed: {
-    activeIcon(): string {
+    activeIcon(): String {
       return this.$route.params.icon;
     }
   }

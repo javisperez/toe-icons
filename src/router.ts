@@ -18,7 +18,7 @@ export default new Router({
       redirect: "/"
     },
     {
-      path: "/icons/:icon",
+      path: "/icons/:icon/:tab?",
       name: "home-icon",
       component: Home
     }

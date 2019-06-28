@@ -2,10 +2,12 @@
 import Vue from "vue";
 import iconsTags from "../../dist/icons-tags.json";
 import { IconTags } from "./IconsList.vue";
+import IconModalTabs from "./IconModalTabs.vue";
+import IconModalAbout from "./IconModalAbout.vue";
+import IconModalPlayground from "./IconModalPlayground.vue";
 
 type State = {
   tags: string[];
-  isRotating: boolean;
 };
 
 export default Vue.extend({
@@ -15,14 +17,25 @@ export default Vue.extend({
     icon: String
   },
 
+  components: {
+    IconModalTabs,
+    IconModalAbout,
+    IconModalPlayground
+  },
+
   data(): State {
     const { icon } = this;
     const tags = (iconsTags as IconTags)[icon];
 
     return {
-      tags,
-      isRotating: false
+      tags
     };
+  },
+
+  computed: {
+    isPlayground() {
+      return this.$route.params.tab === "playground";
+    }
   }
 });
 </script>
@@ -55,127 +68,11 @@ export default Vue.extend({
         </div>
       </div>
 
+      <IconModalTabs :icon="icon" />
+
       <div class="bg-grey-lightest px-6 py-6 rounded-br rounded-bl">
-        <h3 class="flex items-center justify-between mt-0">
-          Examples
-          <span
-            class="cursor-pointer inline-flex items-center text-blue text-sm"
-            @click="isRotating = !isRotating"
-          >
-            <ti
-              :icon="isRotating ? 'toggle-on' : 'toggle-off'"
-              size="28"
-            />Rotate
-          </span>
-        </h3>
-
-        <h4>With Strokes</h4>
-        <div class="flex justify-between mb-16">
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="12"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="18"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="24"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="32"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="64"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-
-          <div class="flex items-center justify-center w-24 h-24">
-            <ti
-              :icon="icon"
-              :spin="isRotating"
-              size="128"
-              stroke="1"
-              strokeColor="#000000"
-              class="text-white"
-            />
-          </div>
-        </div>
-
-        <h4>With Background</h4>
-        <div class="flex justify-between icon-detail-samples">
-          <div
-            class="bg-white flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" />
-          </div>
-
-          <div
-            class="bg-grey flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" class="text-white" />
-          </div>
-
-          <div
-            class="bg-black flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" class="text-white" />
-          </div>
-
-          <div
-            class="bg-blue flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" class="text-white" />
-          </div>
-
-          <div
-            class="bg-red flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" class="text-white" />
-          </div>
-
-          <div
-            class="bg-green flex items-center justify-center w-24 h-24 shadow hover:shadow-lg border-2 rounded-full"
-          >
-            <ti :icon="icon" :spin="isRotating" size="32" class="text-white" />
-          </div>
-        </div>
+        <IconModalAbout :icon="icon" v-if="!isPlayground" />
+        <IconModalPlayground :icon="icon" v-if="isPlayground" />
       </div>
     </div>
   </div>

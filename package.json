@@ -10,11 +10,12 @@
     "build": "node ./scripts/build",
     "lint": "vue-cli-service lint",
     "docs": "vue-cli-service build",
-    "release": "./scripts/release.sh",
-    "ts": "tsc -p tsconfig.json"
+    "release": "./scripts/release.sh"
   },
   "dependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-click-outside": "^1.0.7",
+    "vue-color": "^2.7.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
