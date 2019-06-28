@@ -79,12 +79,14 @@ export default Vue.extend({
   <div class="icons-list">
     <h4 class="flex justify-between items-center">
       <span>
-        <span v-if="filterBy">Showing {{ Object.keys(filteredIcons).length }} of</span>
+        <span v-if="filterBy"
+          >Showing {{ Object.keys(filteredIcons).length }} of</span
+        >
         {{ Object.keys(iconsList).length }} icons available
       </span>
-      <span
-        class="text-sm text-black md:text-grey-light hover:text-black"
-      >latest version: {{ version }}</span>
+      <span class="text-sm text-black md:text-grey-light hover:text-black"
+        >latest version: {{ version }}</span
+      >
     </h4>
     <div class="flex flex-wrap flex-col md:flex-row">
       <div
@@ -97,7 +99,7 @@ export default Vue.extend({
             :to="'/icons/' + icon"
             class="no-underline text-grey-darker hover:text-black"
           >
-            <IconPreview :type="icon"/>
+            <IconPreview :type="icon" />
           </router-link>
         </div>
       </div>
