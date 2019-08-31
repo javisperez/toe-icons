@@ -2,7 +2,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "icon-modal-about",
+  name: "icon-modal-examples",
 
   props: {
     icon: {
@@ -20,63 +20,27 @@ export default Vue.extend({
     <h4>With Strokes</h4>
     <div class="flex justify-between mb-16">
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="12"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="12" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
 
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="18"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="18" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
 
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="24"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="24" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
 
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="32"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="32" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
 
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="64"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="64" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
 
       <div class="flex items-center justify-center w-24 h-24">
-        <ti
-          :icon="icon"
-          size="128"
-          stroke="1"
-          strokeColor="#000000"
-          class="text-white"
-        />
+        <ti :icon="icon" size="128" stroke="1" strokeColor="#000000" class="text-white" />
       </div>
     </div>
 

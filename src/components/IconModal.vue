@@ -1,8 +1,9 @@
 <script lang="ts">
 import Vue from "vue";
 import IconModalTabs from "./IconModalTabs.vue";
-import IconModalAbout from "./IconModalAbout.vue";
 import iconsTags from "../../dist/icons-tags.json";
+import IconModalUsage from "./IconModalUsage.vue";
+import IconModalExamples from "./IconModalExamples.vue";
 import IconModalPlayground from "./IconModalPlayground.vue";
 
 // @TODO these types should be imported from 'types.ts'
@@ -21,7 +22,8 @@ export default Vue.extend({
 
   components: {
     IconModalTabs,
-    IconModalAbout,
+    IconModalUsage,
+    IconModalExamples,
     IconModalPlayground
   },
 
@@ -34,9 +36,9 @@ export default Vue.extend({
     };
   },
 
-  computed: {
-    isPlayground(): boolean {
-      return this.$route.params.tab === "playground";
+  methods: {
+    isTabActive(tab: string): boolean {
+      return this.$route.params.tab === tab;
     }
   }
 });
@@ -44,9 +46,7 @@ export default Vue.extend({
 
 <template>
   <div class="icon-detail fixed pin shadow-lg">
-    <div
-      class="absolute w-full max-w-lg bg-white shadow rounded pt-6 icon-detail-content"
-    >
+    <div class="absolute w-full max-w-lg bg-white shadow rounded pt-6 icon-detail-content">
       <div class="px-6 border-b border-solid border-transparent">
         <div class="flex justify-between items-center mb-4">
           <h2 class="m-0 p-0 flex items-center">
@@ -65,16 +65,16 @@ export default Vue.extend({
             class="tag ml-2 px-2 rounded bg-blue-lighter text-blue-darker"
             v-for="(tag, $index) in tags"
             :key="`tag-${$index}`"
-            >{{ tag }}</span
-          >
+          >{{ tag }}</span>
         </div>
       </div>
 
       <IconModalTabs :icon="icon" />
 
       <div class="bg-grey-lightest px-6 py-6 rounded-br rounded-bl">
-        <IconModalAbout :icon="icon" v-if="!isPlayground" />
-        <IconModalPlayground :icon="icon" v-if="isPlayground" />
+        <IconModalExamples :icon="icon" v-if="!$route.params.tab" />
+        <IconModalPlayground :icon="icon" v-if="isTabActive('playground')" />
+        <IconModalUsage :icon="icon" v-if="isTabActive('usage')" />
       </div>
     </div>
   </div>

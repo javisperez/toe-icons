@@ -8,9 +8,9 @@ export default Vue.extend({
     icon: String
   },
 
-  computed: {
-    isPlayground(): boolean {
-      return this.$route.params.tab === "playground";
+  methods: {
+    isTabActive(tab: string): boolean {
+      return this.$route.params.tab === tab;
     }
   }
 });
@@ -20,20 +20,29 @@ export default Vue.extend({
   <div class="tabs">
     <router-link
       class="p-4 py-2 no-underline inline-flex items-center ml-6 rounded-t-lg text-sm"
-      :class="{ 'text-cyan hover:text-cyan-dark': isPlayground }"
+      :class="{ 'text-grey hover:text-black': $route.params.tab }"
       exact-active-class="bg-grey-lightest text-black"
       :to="`/icons/${icon}`"
     >
-      <TiInfoCircle size="21" class="mr-1" /> About
+      <TiHeart class="text-red" size="21" />Examples
     </router-link>
 
     <router-link
-      class="p-4 py-2 no-underline inline-flex items-center rounded-t-lg text-sm"
-      :class="{ 'text-cyan hover:text-cyan-dark': !isPlayground }"
+      class="p-4 py-2 no-underline inline-flex items-center rounded-t-lg text-sm ml-2"
+      :class="{ 'text-grey hover:text-black': !isTabActive('usage') }"
+      exact-active-class="bg-grey-lightest text-black"
+      :to="`/icons/${icon}/usage`"
+    >
+      <TiWrench class="text-green-dark" size="21" />Usage
+    </router-link>
+
+    <router-link
+      class="p-4 py-2 no-underline inline-flex items-center rounded-t-lg text-sm ml-2"
+      :class="{ 'text-grey hover:text-black': !isTabActive('playground') }"
       exact-active-class="bg-grey-lightest text-black"
       :to="`/icons/${icon}/playground`"
     >
-      <TiDuck size="21" class="mr-1" /> Playground
+      <TiDuck class="text-blue" size="21" />Playground
     </router-link>
   </div>
 </template>

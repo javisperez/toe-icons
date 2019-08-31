@@ -38,10 +38,18 @@ const generateComponents = args => {
       strokeColor: {
         type: String,
         default: options.strokeColor
-      }
+      },
     },
 
-    template: `<svg :is="'ti-'+icon" :size="size" :stroke="stroke" :color="color" :stroke-color="strokeColor" :spin="spin"></svg>`
+    template: `
+      <svg
+        :is="'ti-'+icon"
+        :size="size"
+        :stroke="stroke"
+        :color="color"
+        :stroke-color="strokeColor"
+        :spin="spin" />
+      `
   };
 
   // All the rest of components
