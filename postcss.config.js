@@ -12,6 +12,7 @@ module.exports = {
     process.env.NODE_ENV === "production"
       ? purgecss({
           content: ["./src/**/*.html", "./src/**/*.vue"],
+          whitelistPatterns: [/multiselect|fieldset\[disabled\]/],
           extractors: [
             {
               extractor: {

@@ -2,7 +2,7 @@
 import Vue from "vue";
 import { Chrome as ColorPicker } from "vue-color";
 import ClickOutside from "vue-click-outside";
-// import Multiselect from "vue-multiselect";
+import Multiselect from "vue-multiselect";
 import iconsJson from "../../dist/icons.json";
 import { capitalize } from "lodash";
 
@@ -10,8 +10,8 @@ export default Vue.extend({
   name: "icon-modal-playground",
 
   components: {
-    ColorPicker
-    // Multiselect
+    ColorPicker,
+    Multiselect
   },
 
   directives: {
@@ -203,7 +203,7 @@ export default Vue.extend({
     <div
       class="flex flex-col justify-center items-center flex-auto bg-white p-4"
     >
-      <!-- <div class="w-full z-10">
+      <div class="w-full z-10">
         <div class="flex justify-start w-full items-center">
           <label>
             <input type="checkbox" v-model="isSecondaryIconEnabled" />
@@ -273,7 +273,7 @@ export default Vue.extend({
             >
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div class="flex-1 w-full text-center justify-center items-center flex">
         <span class="relative block">
