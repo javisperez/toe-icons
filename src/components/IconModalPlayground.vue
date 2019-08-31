@@ -4,7 +4,7 @@ import { Chrome as ColorPicker } from "vue-color";
 import ClickOutside from "vue-click-outside";
 import Multiselect from "vue-multiselect";
 import iconsJson from "../../dist/icons.json";
-import { capitalize } from 'lodash'
+import { capitalize } from "lodash";
 
 export default Vue.extend({
   name: "icon-modal-playground",
@@ -36,8 +36,8 @@ export default Vue.extend({
         fill: ["#F00", "#0F0", "#00F", "#000", "#FFF", "#F0F"],
         stroke: ["#F00", "#0F0", "#00F", "#000", "#FFF", "#F0F"],
 
-        tmpFill: '',
-        tmpStroke: '',
+        tmpFill: "",
+        tmpStroke: ""
       }
     };
   },
@@ -85,7 +85,15 @@ export default Vue.extend({
       <div>
         <strong>Fill Color</strong>
         <ul class="list-reset flex items-center">
-          <li style="line-height: 0" class="cursor-pointer hover:text-black" v-click-outside="() => { hidePicker('fill'); }">
+          <li
+            style="line-height: 0"
+            class="cursor-pointer hover:text-black"
+            v-click-outside="
+              () => {
+                hidePicker('fill');
+              }
+            "
+          >
             <div
               class="inline-flex items-center"
               @click="isFillColorPickerOpen = true"
@@ -94,19 +102,29 @@ export default Vue.extend({
               <div class="absolute" v-show="isFillColorPickerOpen">
                 <ColorPicker
                   :value="fillColor"
-                  @input="({ hex }) => { this.colors.tmpFill = hex; }"
+                  @input="
+                    ({ hex }) => {
+                      this.colors.tmpFill = hex;
+                    }
+                  "
                 />
               </div>
             </div>
           </li>
           <li
             class="ml-2 cursor-pointer border-2 border-solid block w-4 h-4 rounded-full hover:border-grey-darker"
-            :class="{'border-black': color === fillColor, 'border-grey-light': color !== fillColor}"
+            :class="{
+              'border-black': color === fillColor,
+              'border-grey-light': color !== fillColor
+            }"
             v-for="(color, i) in colors.fill"
             :key="`${color}${i}`"
             @click="fillColor = color"
           >
-            <span class="block w-full h-full rounded-full" :style="`background: ${color}`"></span>
+            <span
+              class="block w-full h-full rounded-full"
+              :style="`background: ${color}`"
+            ></span>
           </li>
         </ul>
       </div>
@@ -114,7 +132,15 @@ export default Vue.extend({
       <div>
         <strong>Stroke Color</strong>
         <ul class="list-reset flex items-center">
-          <li style="line-height: 0" class="cursor-pointer hover:text-black" v-click-outside="() => { hidePicker('stroke'); }">
+          <li
+            style="line-height: 0"
+            class="cursor-pointer hover:text-black"
+            v-click-outside="
+              () => {
+                hidePicker('stroke');
+              }
+            "
+          >
             <div
               class="inline-flex items-center"
               @click="isStrokeColorPickerOpen = true"
@@ -123,19 +149,29 @@ export default Vue.extend({
               <div class="absolute" v-show="isStrokeColorPickerOpen">
                 <ColorPicker
                   :value="strokeColor"
-                  @input="({ hex }) => { this.colors.tmpStroke = hex; }"
+                  @input="
+                    ({ hex }) => {
+                      this.colors.tmpStroke = hex;
+                    }
+                  "
                 />
               </div>
             </div>
           </li>
           <li
             class="ml-2 cursor-pointer border-2 border-solid block w-4 h-4 rounded-full hover:border-grey-darker"
-            :class="{'border-black': color === strokeColor, 'border-grey-light': color !== strokeColor}"
+            :class="{
+              'border-black': color === strokeColor,
+              'border-grey-light': color !== strokeColor
+            }"
             v-for="(color, i) in colors.stroke"
             :key="`${color}${i}`"
             @click="strokeColor = color"
           >
-            <span class="block w-full h-full rounded-full" :style="`background: ${color}`"></span>
+            <span
+              class="block w-full h-full rounded-full"
+              :style="`background: ${color}`"
+            ></span>
           </li>
         </ul>
       </div>
@@ -143,7 +179,14 @@ export default Vue.extend({
       <div>
         <strong>Stroke Width</strong>
         <div class="border border-grey-darker py-2 flex text-black font-bold">
-          <input type="range" min="0" max="4" v-model="strokeSize" step="1" class="flex-auto" />
+          <input
+            type="range"
+            min="0"
+            max="4"
+            v-model="strokeSize"
+            step="1"
+            class="flex-auto"
+          />
           <span class="ml-1 w-12 text-sm">{{ strokeSize }}</span>
         </div>
       </div>
@@ -157,7 +200,9 @@ export default Vue.extend({
       </div>
     </div>
 
-    <div class="flex flex-col justify-center items-center flex-auto bg-white p-4">
+    <div
+      class="flex flex-col justify-center items-center flex-auto bg-white p-4"
+    >
       <div class="w-full z-10">
         <div class="flex justify-start w-full items-center">
           <label>
@@ -189,24 +234,43 @@ export default Vue.extend({
           <div class="whitespace-no-wrap text-sm ml-2">
             <span
               class="cursor-pointer"
-              :class="{'text-black': secondaryIconScale === 1.5, 'text-blue hover:underline': secondaryIconScale !== 1.5, }"
+              :class="{
+                'text-black': secondaryIconScale === 1.5,
+                'text-blue hover:underline': secondaryIconScale !== 1.5
+              }"
               @click="secondaryIconScale = 1.5"
-            >1.5x</span> |
+              >1.5x</span
+            >
+            |
             <span
               class="cursor-pointer"
-              :class="{'text-black': secondaryIconScale === 1.0, 'text-blue hover:underline': secondaryIconScale !== 1.0, }"
+              :class="{
+                'text-black': secondaryIconScale === 1.0,
+                'text-blue hover:underline': secondaryIconScale !== 1.0
+              }"
               @click="secondaryIconScale = 1.0"
-            >1.0x</span> |
+              >1.0x</span
+            >
+            |
             <span
               class="cursor-pointer"
-              :class="{'text-black': secondaryIconScale === 0.75, 'text-blue hover:underline': secondaryIconScale !== 0.75, }"
+              :class="{
+                'text-black': secondaryIconScale === 0.75,
+                'text-blue hover:underline': secondaryIconScale !== 0.75
+              }"
               @click="secondaryIconScale = 0.75"
-            >0.75x</span> |
+              >0.75x</span
+            >
+            |
             <span
               class="cursor-pointer"
-              :class="{'text-black': secondaryIconScale === 0.5, 'text-blue hover:underline': secondaryIconScale !== 0.5, }"
+              :class="{
+                'text-black': secondaryIconScale === 0.5,
+                'text-blue hover:underline': secondaryIconScale !== 0.5
+              }"
               @click="secondaryIconScale = 0.5"
-            >0.5x</span>
+              >0.5x</span
+            >
           </div>
         </div>
       </div>

@@ -46,7 +46,9 @@ export default Vue.extend({
 
 <template>
   <div class="icon-detail fixed pin shadow-lg">
-    <div class="absolute w-full max-w-lg bg-white shadow rounded pt-6 icon-detail-content">
+    <div
+      class="absolute w-full max-w-lg bg-white shadow rounded pt-6 icon-detail-content"
+    >
       <div class="px-6 border-b border-solid border-transparent">
         <div class="flex justify-between items-center mb-4">
           <h2 class="m-0 p-0 flex items-center">
@@ -65,7 +67,8 @@ export default Vue.extend({
             class="tag ml-2 px-2 rounded bg-blue-lighter text-blue-darker"
             v-for="(tag, $index) in tags"
             :key="`tag-${$index}`"
-          >{{ tag }}</span>
+            >{{ tag }}</span
+          >
         </div>
       </div>
 

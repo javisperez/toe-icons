@@ -38,7 +38,7 @@ const generateComponents = args => {
       strokeColor: {
         type: String,
         default: options.strokeColor
-      },
+      }
     },
 
     template: `

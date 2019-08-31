@@ -28,19 +28,18 @@ export default Vue.extend({
 
     <h4>With CSS</h4>
     <code-highlight language="css">
-&lt;style&gt;
-  .icon {
-    width: 24px;
-    height: 24px;
-    background: url(./icons/file.svg) no-repeat;
-  }
-&lt;/style&gt;
+      &lt;style&gt; .icon { width: 24px; height: 24px; background:
+      url(./icons/file.svg) no-repeat; } &lt;/style&gt;
     </code-highlight>
 
     <h4>With HTML</h4>
-    <code-highlight language="html">&lt;img src="./icons/file.svg" width="24" height="24" /&gt;</code-highlight>
+    <code-highlight language="html"
+      >&lt;img src="./icons/file.svg" width="24" height="24"
+      /&gt;</code-highlight
+    >
   </div>
 </template>
 
-
-<style src="../../node_modules/vue-code-highlight/themes/prism-okaidia.css"></style>
+<style
+  src="../../node_modules/vue-code-highlight/themes/prism-okaidia.css"
+></style>
