@@ -10,7 +10,7 @@ export default Vue.extend({
   name: "icon-modal-playground",
 
   components: {
-    ColorPicker,
+    ColorPicker
     // Multiselect
   },
 
