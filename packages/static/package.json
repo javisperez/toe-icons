@@ -42,5 +42,6 @@
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "gitHead": "178b61915849073f81b8984d1462779be95b05ea"
 }

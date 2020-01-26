@@ -12,7 +12,5 @@
   "dependencies": {
     "@toe-icons/icons": "^1.0.0"
   },
-  "publishConfig": {
-    "directory": "dist"
-  }
+  "gitHead": "178b61915849073f81b8984d1462779be95b05ea"
 }
