@@ -1,0 +1,23 @@
+{
+  "name": "@toe-icons/icons",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "icons:info": "node ./scripts/generate-icons-info",
+    "icons:content": "node ./scripts/generate-icons-content",
+    "icons:tags": "node ./scripts/generate-icons-tags",
+    "icons:optimize": "node ./scripts/optimize",
+    "build": "npm run icons:optimize && npm run icons:info && npm run icons:tags && npm run icons:content"
+  },
+  "main": "./dist/index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "svgo": "^1.3.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "directory": "dist"
+  }
+}

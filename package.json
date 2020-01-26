@@ -1,62 +1,15 @@
 {
   "name": "toe-icons",
-  "version": "0.4.1",
-  "author": {
-    "name": "Javis Pérez",
-    "email": "javisperez@gmail.com"
-  },
+  "license": "Apache-2.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "node ./scripts/build",
-    "lint": "vue-cli-service lint",
-    "docs": "vue-cli-service build",
-    "release": "npm run build && npm run docs && ./scripts/release.sh"
-  },
-  "dependencies": {
-    "@types/vue-color": "^2.4.2",
-    "vue": "^2.6.10",
-    "vue-click-outside": "^1.0.7",
-    "vue-code-highlight": "^0.7.2",
-    "vue-color": "^2.7.0",
-    "vue-multiselect": "^2.1.6"
+    "lerna": "lerna",
+    "bootstrap": "lerna bootstrap",
+    "build:icons": "cd packages/icons && npm run build",
+    "build:vue": "cd packages/vue && npm run components:generate",
+    "build": "npm run build:icons && npm run build:vue",
+    "docs": "cd packages/static && npm run build"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.1.0",
-    "@types/jest": "^23.1.4",
-    "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-plugin-eslint": "^3.5.1",
-    "@vue/cli-plugin-typescript": "^3.8.1",
-    "@vue/cli-service": "^3.8.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "@vue/eslint-config-typescript": "^4.0.0",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "cheerio": "^1.0.0-rc.2",
-    "eslint": "^5.15.3",
-    "eslint-plugin-vue": "^5.2.2",
-    "husky": "^1.3.1",
-    "tailwindcss": "^0.7.4",
-    "typescript": "^3.4.3",
-    "vue-router": "^3.0.2",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "keywords": [
-    "vue",
-    "vuejs",
-    "toe",
-    "icons",
-    "plugin"
-  ],
-  "license": "MIT",
-  "main": "./dist/components.js",
-  "readme": "README.md",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/javisperez/toe-icons.git"
+    "lerna": "^3.16.4"
   }
 }

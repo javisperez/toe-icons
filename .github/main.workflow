@@ -5,7 +5,7 @@ workflow "Build and deploy docs" {
 
 action "Install dependencies" {
   uses = "actions/npm@master"
-  args = "install"
+  args = "bootstrap"
 }
 
 action "Build icons files" {

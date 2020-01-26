@@ -1,13 +1,13 @@
 const path = require('path');
 
-const ICONS_DIR = path.resolve(__dirname, '../packages/icons/assets/icons');
 const DIST_DIR = path.resolve(__dirname, '../dist');
-const SRC_DIR = path.resolve(__dirname, '../src');
+const ICONS_DIR = path.resolve(__dirname, '../assets/icons');
+const DIST_DIR_ICONS = path.resolve(__dirname, '../dist/svg');
 
 module.exports = {
   ICONS_DIR,
   DIST_DIR,
-  SRC_DIR,
+  DIST_DIR_ICONS,
   SVGO_DEFAULTS: [
     {
       addAttributesToSVGElement: {

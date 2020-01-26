@@ -1,0 +1,18 @@
+{
+  "name": "@toe-icons/vue",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "components:generate": "node ./scripts/generate-components"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "dependencies": {
+    "@toe-icons/icons": "^1.0.0"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  }
+}
