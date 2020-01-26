@@ -1,6 +1,7 @@
 {
   "name": "@toe-icons/static",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "serve": "cd ../../ && npm run build && vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -43,5 +44,5 @@
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   },
-  "gitHead": "178b61915849073f81b8984d1462779be95b05ea"
+  "gitHead": "be4db3ef9d652fbad1dd92fcab0e84e1736c867e"
 }
