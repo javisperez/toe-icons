@@ -3,6 +3,11 @@ workflow "Build and deploy docs" {
   resolves = ["Generate docs"]
 }
 
+workflow "PR passes" {
+  on = "pull_request"
+  resolves = ["Build icons files"]
+}
+
 action "Install dependencies" {
   uses = "actions/npm@master"
   args = "bootstrap"
