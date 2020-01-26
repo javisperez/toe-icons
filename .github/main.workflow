@@ -1,5 +1,5 @@
 workflow "Build and deploy docs" {
-  on = "push"
+  on = "pull_request"
   resolves = ["Generate docs"]
 }
 
