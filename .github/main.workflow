@@ -1,5 +1,10 @@
-workflow "Build and deploy docs" {
+workflow "Check status" {
   on = "pull_request"
+  resolves = ["Build icons files"]
+}
+
+workflow "Check status & deploy docs" {
+  on = "push"
   resolves = ["Generate docs"]
 }
 
