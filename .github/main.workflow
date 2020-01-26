@@ -1,11 +1,6 @@
 workflow "Build and deploy docs" {
-  on = "push"
-  resolves = ["Generate docs"]
-}
-
-workflow "PR passes" {
   on = "pull_request"
-  resolves = ["Build icons files"]
+  resolves = ["Generate docs"]
 }
 
 action "Install dependencies" {
