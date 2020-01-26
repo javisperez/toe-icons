@@ -1,6 +1,6 @@
 {
   "name": "@toe-icons/static",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "serve": "cd ../../ && npm run build && vue-cli-service serve",
     "build": "vue-cli-service build",
