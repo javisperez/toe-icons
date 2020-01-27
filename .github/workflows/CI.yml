@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -19,6 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: install dependencies, build icons, build components
       run: |
+        npm run install
         npm run bootstrap
         npm run build
         npm run docs
