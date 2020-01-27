@@ -1,5 +1,7 @@
 # Toe Icons
 
+![CI](https://github.com/javisperez/toe-icons/workflows/CI/badge.svg)
+
 A very minimalist linear icons pack https://javisperez.github.io/toe-icons
 
 ## About
