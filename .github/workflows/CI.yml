@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: install dependencies, build icons, build components
       run: |
-        npm run install
+        npm install
         npm run bootstrap
         npm run build
         npm run docs
