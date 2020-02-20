@@ -20,7 +20,7 @@ You can install any of the wanted packages from npm:
 
 ### Icons
 
-```
+```shell
 npm install @toe-icons/icons
 ```
 
@@ -37,22 +37,22 @@ This will install the svg icons along with some util json files:
 ```
 you can then import it like:
 
-```
+```js
 import search from '@toe-icon/icons/dist/svg/search.svg
 ```
 
 ### Vue components
-```
+```shell
 npm install @toe-icons/vue
 ```
 
 Then you can import it with:
-```
+```js
 import { TiArrowDown } from "@toe-icons/vue"
 ```
 or use the plugin version:
 
-```
+```jsx
 import Vue from "vue"
 import Ti from "@toe-icons/vue"
 
