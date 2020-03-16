@@ -1,6 +1,6 @@
 {
   "name": "@toe-icons/vue",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "Apache-2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,9 +8,9 @@
     "components:generate": "node ./scripts/generate-components"
   },
   "dependencies": {
+    "@toe-icons/icons": "^1.1.0",
     "core-js": "^3.6.4",
-    "vue": "^2.6.11",
-    "@toe-icons/icons": "^1.0.0"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",

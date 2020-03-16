@@ -1,6 +1,6 @@
 {
   "name": "@toe-icons/svelte",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "Apache-2.0",
   "scripts": {
     "build": "rollup -c",
@@ -19,8 +19,8 @@
   },
   "main": "dist/toeicons.js",
   "dependencies": {
-    "sirv-cli": "^0.4.4",
-    "@toe-icons/icons": "^1.0.0"
+    "@toe-icons/icons": "^1.1.0",
+    "sirv-cli": "^0.4.4"
   },
   "publishConfig": {
     "access": "public"
