@@ -9,6 +9,7 @@
     "build:svelte": "cd packages/svelte && npm run components:generate",
     "build:components": "npm run build:vue && npm run build:svelte",
     "build": "npm run build:icons && npm run build:components",
+    "serve": "cd packages/static && npm run serve",
     "docs": "npm run build && cd packages/static && npm run build",
     "publish": "lerna publish && npm run docs && git commit -am \"[publish] docs update\" && git push"
   },

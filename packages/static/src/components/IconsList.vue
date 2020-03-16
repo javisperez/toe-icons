@@ -64,12 +64,14 @@ export default {
   <div class="icons-list">
     <div class="flex justify-between items-center mb-4">
       <span>
-        <span v-if="filterBy">Showing {{ Object.keys(filteredIcons).length }} of</span>
+        <span v-if="filterBy"
+          >Showing {{ Object.keys(filteredIcons).length }} of</span
+        >
         {{ Object.keys(iconsList).length }} icons available
       </span>
-      <span
-        class="text-sm text-black md:text-gray-400 hover:text-black"
-      >latest version: {{ version }}</span>
+      <span class="text-sm text-black md:text-gray-400 hover:text-black"
+        >latest version: {{ version }}</span
+      >
     </div>
 
     <div class="flex flex-wrap flex-col md:flex-row">
@@ -79,7 +81,10 @@ export default {
         :key="icon"
       >
         <div class="w-full">
-          <router-link :to="'/icons/' + icon" class="no-underline text-gray-700 hover:text-black">
+          <router-link
+            :to="'/icons/' + icon"
+            class="no-underline text-gray-700 hover:text-black"
+          >
             <IconPreview :icon="icon" />
           </router-link>
         </div>
