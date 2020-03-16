@@ -6,7 +6,9 @@
     "bootstrap": "lerna bootstrap",
     "build:icons": "cd packages/icons && npm run build",
     "build:vue": "cd packages/vue && npm run components:generate",
-    "build": "npm run build:icons && npm run build:vue",
+    "build:svelte": "cd packages/svelte && npm run components:generate",
+    "build:components": "npm run build:vue && npm run build:svelte",
+    "build": "npm run build:icons && npm run build:components",
     "docs": "npm run build && cd packages/static && npm run build",
     "publish": "lerna publish && npm run docs && git commit -am \"[publish] docs update\" && git push"
   },
