@@ -1,17 +1,26 @@
 {
-  "name": "@toe-icons/vue",
-  "version": "1.0.0",
-  "license": "Apache-2.0",
+  "name": "vue",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run components:generate && vue-cli-service build --target lib --name toeicons --inline-vue components/index.js",
     "components:generate": "node ./scripts/generate-components"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "@toe-icons/icons": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "dependencies": {
-    "@toe-icons/icons": "^1.0.0"
-  },
+  "main": "dist/toeicons.umd.min.js",
   "publishConfig": {
     "access": "public"
   },

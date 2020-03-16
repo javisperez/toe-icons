@@ -5,7 +5,7 @@
     "lerna": "lerna",
     "bootstrap": "lerna bootstrap",
     "build:icons": "cd packages/icons && npm run build",
-    "build:vue": "cd packages/vue && npm run components:generate",
+    "build:vue": "cd packages/vue && npm run build",
     "build:svelte": "cd packages/svelte && npm run components:generate",
     "build:components": "npm run build:vue && npm run build:svelte",
     "build": "npm run build:icons && npm run build:components",
