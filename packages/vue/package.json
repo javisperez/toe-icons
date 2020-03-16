@@ -1,7 +1,6 @@
 {
   "name": "vue",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run components:generate && vue-cli-service build --target lib --name toeicons --inline-vue components/index.js",
