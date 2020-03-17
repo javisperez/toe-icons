@@ -1,3 +1,5 @@
+![CI](https://github.com/javisperez/toe-icons/workflows/CI/badge.svg?branch=master)
+
 # Toe Icons
 
 <!-- ![CI](https://github.com/javisperez/toe-icons/workflows/CI/badge.svg) -->
