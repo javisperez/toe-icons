@@ -9,10 +9,10 @@ const production = !process.env.ROLLUP_WATCH;
 export default {
 	input: 'components/index.js',
 	output: {
-		sourcemap: true,
-		format: 'iife',
-		name: 'app',
-		file: 'dist/toeicons.js'
+		sourcemap: false,
+		format: 'umd',
+		name: 'toeicons',
+		file: 'dist/toeicons.umd.js'
 	},
 	plugins: [
 		svelte({
