@@ -57,6 +57,8 @@
             <g id="star-empty" transform="matrix(1.05152,0,0,1.05152,460.558,-59.6026)">
                 <path d="M693.388,264.584L710.825,264.584L696.719,274.833L702.107,291.416L688,281.167L673.893,291.416L679.281,274.833L665.175,264.584L682.612,264.584L688,248C689.796,253.528 691.592,259.056 693.388,264.584ZM688,260.391L688,276.434L694.824,281.392L692.217,273.37L699.041,268.413L690.606,268.413L688,260.391Z" style="fill-rule:nonzero;"/>
             </g>
+            <g id="radio-check">
+            </g>
             <g id="eye-slash">
             </g>
             <g id="eye">
@@ -68,6 +70,30 @@
             <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]">
             </g>
             <g id="react">
+            </g>
+            <g id="check-selected">
+            </g>
+            <g id="turn-off">
+            </g>
+            <g id="code-block">
+            </g>
+            <g id="user">
+            </g>
+            <g id="coffee-bean">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)">
+                <g id="coffee-beans">
+                    <g id="coffee-bean1" serif:id="coffee-bean">
+                    </g>
+                </g>
+            </g>
+            <g id="coffee-bean-filled">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)">
+                <g id="coffee-beans-filled">
+                    <g id="coffee-bean2" serif:id="coffee-bean">
+                    </g>
+                </g>
             </g>
         </g>
     </g>

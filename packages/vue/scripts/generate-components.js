@@ -74,7 +74,7 @@ export default {
 }
 </script>
 <template>
-<svg
+<component
   :is="'ti-'+icon"
   :size="size"
   :stroke="stroke"

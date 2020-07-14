@@ -63,6 +63,8 @@
             </g>
             <g id="logo">
             </g>
+            <g id="radio-check">
+            </g>
             <g id="eye-slash">
             </g>
             <g id="eye">
@@ -74,6 +76,30 @@
             <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]">
             </g>
             <g id="react">
+            </g>
+            <g id="check-selected">
+            </g>
+            <g id="turn-off">
+            </g>
+            <g id="code-block">
+            </g>
+            <g id="user">
+            </g>
+            <g id="coffee-bean">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)">
+                <g id="coffee-beans">
+                    <g id="coffee-bean1" serif:id="coffee-bean">
+                    </g>
+                </g>
+            </g>
+            <g id="coffee-bean-filled">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)">
+                <g id="coffee-beans-filled">
+                    <g id="coffee-bean2" serif:id="coffee-bean">
+                    </g>
+                </g>
             </g>
         </g>
     </g>
