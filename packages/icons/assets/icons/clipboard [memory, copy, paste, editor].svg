@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-704,-320)">
+        <rect id="Icons" x="0" y="0" width="1280" height="800" style="fill:none;"/>
+        <g id="Icons1" serif:id="Icons">
+            <g id="Strike">
+            </g>
+            <g id="H1">
+            </g>
+            <g id="H2">
+            </g>
+            <g id="H3">
+            </g>
+            <g id="list-ul">
+            </g>
+            <g id="hamburger-1">
+            </g>
+            <g id="hamburger-2">
+            </g>
+            <g id="list-ol">
+            </g>
+            <g id="list-task">
+            </g>
+            <g id="trash">
+            </g>
+            <g id="vertical-menu">
+            </g>
+            <g id="horizontal-menu">
+            </g>
+            <g id="sidebar-2">
+            </g>
+            <g id="Pen">
+            </g>
+            <g id="Pen1" serif:id="Pen">
+            </g>
+            <g id="clock">
+            </g>
+            <g id="external-link">
+            </g>
+            <g id="hr">
+            </g>
+            <g id="info">
+            </g>
+            <g id="warning">
+            </g>
+            <g id="plus-circle">
+            </g>
+            <g id="minus-circle">
+            </g>
+            <g id="vue">
+            </g>
+            <g id="cog">
+            </g>
+            <g id="logo">
+            </g>
+            <g id="radio-check">
+            </g>
+            <g id="eye-slash">
+            </g>
+            <g id="eye">
+            </g>
+            <g id="toggle-off">
+            </g>
+            <g id="shredder">
+            </g>
+            <g id="spinner--loading--dots-" serif:id="spinner [loading, dots]">
+            </g>
+            <g id="react">
+            </g>
+            <g id="check-selected">
+            </g>
+            <g id="turn-off">
+            </g>
+            <g id="code-block">
+            </g>
+            <g id="user">
+            </g>
+            <g id="coffee-bean">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,785.021,-208.975)">
+                <g id="coffee-beans">
+                    <g id="coffee-bean1" serif:id="coffee-bean">
+                    </g>
+                </g>
+            </g>
+            <g id="coffee-bean-filled">
+            </g>
+            <g transform="matrix(0.638317,0.368532,-0.368532,0.638317,913.062,-208.975)">
+                <g id="coffee-beans-filled">
+                    <g id="coffee-bean2" serif:id="coffee-bean">
+                    </g>
+                </g>
+            </g>
+            <g id="clipboard">
+                <g id="clipboard1" serif:id="clipboard" transform="matrix(1,0,0,1,-0.0212163,0)">
+                    <path d="M750.005,376L722.016,376C718.707,376 716.021,373.314 716.021,370.005L716.042,338.535C716.042,335.226 718.728,332.54 722.037,332.54L726.517,332.54C726.517,332.54 726.517,332.713 726.517,332C726.517,331.731 726.624,331.472 726.814,331.282C727.005,331.091 727.263,330.984 727.533,330.984C729.385,330.984 733.122,330.984 733.122,330.984C733.122,330.984 733.192,328.028 736.021,328.028C738.85,328.028 738.893,330.984 738.893,330.984L744.408,330.984C744.969,330.984 745.424,331.439 745.424,332C745.424,332.713 745.424,332.54 745.424,332.54L750.026,332.54C753.335,332.54 756.021,335.226 756.021,338.535L756,370.005C756,373.314 753.314,376 750.005,376ZM749.012,371.999C750.662,371.999 752.001,370.66 752.001,369.01L752.022,339.529C752.022,337.88 750.683,336.541 749.033,336.54L745.424,336.54L745.424,337.513C745.424,338.075 744.969,338.529 744.408,338.529C741.124,338.529 730.817,338.529 727.533,338.529C726.971,338.529 726.517,338.075 726.517,337.513C726.517,336.647 726.517,336.54 726.517,336.54L723.03,336.54C721.38,336.541 720.041,337.88 720.041,339.529L720.02,369.01C720.02,370.66 721.359,371.999 723.009,371.999L749.012,371.999ZM736.021,329.382C736.86,329.382 737.542,330.064 737.542,330.903C737.542,331.742 736.86,332.423 736.021,332.423C735.182,332.423 734.501,331.742 734.501,330.903C734.501,330.064 735.182,329.382 736.021,329.382Z"/>
+                </g>
+                <g transform="matrix(2.91775,0,0,1,170.164,76)">
+                    <rect x="189.816" y="267" width="8.226" height="2" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.91775,0,0,1,170.164,81.2438)">
+                    <rect x="189.816" y="267" width="8.226" height="2" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.91775,0,0,1,170.143,86.4877)">
+                    <rect x="189.816" y="267" width="8.226" height="2" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.91775,0,0,1,170.164,91.7315)">
+                    <rect x="189.816" y="267" width="8.226" height="2" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.91775,0,0,1,170.164,96.9753)">
+                    <rect x="189.816" y="267" width="8.226" height="2" style="fill-rule:nonzero;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,128.011,1.35415)">
+                <g id="clipboard-paste">
+                </g>
+            </g>
+            <g id="clipboard-copy">
+            </g>
+            <g id="Layer1">
+            </g>
+        </g>
+    </g>
+</svg>
