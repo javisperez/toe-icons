@@ -98,6 +98,16 @@
                     </g>
                 </g>
             </g>
+            <g id="clipboard">
+            </g>
+            <g transform="matrix(1,0,0,1,128.011,1.35415)">
+                <g id="clipboard-paste">
+                </g>
+            </g>
+            <g id="clipboard-copy">
+            </g>
+            <g id="Layer1">
+            </g>
         </g>
     </g>
 </svg>

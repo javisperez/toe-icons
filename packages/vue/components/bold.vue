@@ -14,7 +14,7 @@ export default {
 
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" class="toe-icon ti ti-bold"
-    :class="{'spin': spin}" :width="size" :height="size"
+    :width="size" :height="size"
     viewBox="0 0 64 64" :fill="color" :stroke="strokeColor"
     :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round">
     <text x="9.879" y="56.132" font-family="&apos;Roboto-Bold&apos;,&apos;Roboto&apos;" font-weight="700" font-size="67.597">B</text>

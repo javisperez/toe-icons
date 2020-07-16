@@ -1,7 +1,4 @@
-import Ti from "./ti.vue"
-  export { Ti }
 
-  
     import TiAnchorDown from "./anchor-down.vue"
     export { TiAnchorDown }
 
@@ -56,6 +53,15 @@ import Ti from "./ti.vue"
     import TiCircleSelected from "./circle-selected.vue"
     export { TiCircleSelected }
 
+    import TiClipboard from "./clipboard.vue"
+    export { TiClipboard }
+
+    import TiClipboardCopy from "./clipboard-copy.vue"
+    export { TiClipboardCopy }
+
+    import TiClipboardPaste from "./clipboard-paste.vue"
+    export { TiClipboardPaste }
+
     import TiClock from "./clock.vue"
     export { TiClock }
 
@@ -97,6 +103,9 @@ import Ti from "./ti.vue"
 
     import TiConnection2 from "./connection-2.vue"
     export { TiConnection2 }
+
+    import TiCopy from "./copy.vue"
+    export { TiCopy }
 
     import TiDeny from "./deny.vue"
     export { TiDeny }
@@ -209,6 +218,9 @@ import Ti from "./ti.vue"
     import TiMinusCircle from "./minus-circle.vue"
     export { TiMinusCircle }
 
+    import TiMoon from "./moon.vue"
+    export { TiMoon }
+
     import TiPaperShredder from "./paper-shredder.vue"
     export { TiPaperShredder }
 
@@ -290,6 +302,9 @@ import Ti from "./ti.vue"
     import TiSuccess from "./success.vue"
     export { TiSuccess }
 
+    import TiSun from "./sun.vue"
+    export { TiSun }
+
     import TiTags from "./tags.vue"
     export { TiTags }
 
@@ -340,7 +355,6 @@ import Ti from "./ti.vue"
         props: {
           ...component.props,
           size: { type: [String, Number], default: defaults.size },
-          spin: { type: Boolean, default: false },
           color: { type: String, default: defaults.color },
           stroke: { type: [String, Number], default: defaults.stroke },
           strokeColor: { type: String, default: defaults.strokeColor }
@@ -350,19 +364,17 @@ import Ti from "./ti.vue"
 
     // Vue Plugin
     export default {
-      install(Vue, overrides = {}) {
+      install(app, overrides = {}) {
         const options = {
           size: 24,
-          spin: false,
           stroke: 0,
           color: "currentColor",
           strokeColor: "currentColor",
           ...overrides
         }
 
-        Vue.mixin({
+        app.mixin({
           components: {
-            Ti: applyDefaultsToComponentProps(Ti, options),
             TiAnchorDown: applyDefaultsToComponentProps(TiAnchorDown, options),
             TiAnchorLeft: applyDefaultsToComponentProps(TiAnchorLeft, options),
             TiAnchorRight: applyDefaultsToComponentProps(TiAnchorRight, options),
@@ -381,6 +393,9 @@ import Ti from "./ti.vue"
             TiCircleChecked: applyDefaultsToComponentProps(TiCircleChecked, options),
             TiCircleFilled: applyDefaultsToComponentProps(TiCircleFilled, options),
             TiCircleSelected: applyDefaultsToComponentProps(TiCircleSelected, options),
+            TiClipboard: applyDefaultsToComponentProps(TiClipboard, options),
+            TiClipboardCopy: applyDefaultsToComponentProps(TiClipboardCopy, options),
+            TiClipboardPaste: applyDefaultsToComponentProps(TiClipboardPaste, options),
             TiClock: applyDefaultsToComponentProps(TiClock, options),
             TiCloud: applyDefaultsToComponentProps(TiCloud, options),
             TiCloudDownload: applyDefaultsToComponentProps(TiCloudDownload, options),
@@ -395,6 +410,7 @@ import Ti from "./ti.vue"
             TiCog: applyDefaultsToComponentProps(TiCog, options),
             TiConnection: applyDefaultsToComponentProps(TiConnection, options),
             TiConnection2: applyDefaultsToComponentProps(TiConnection2, options),
+            TiCopy: applyDefaultsToComponentProps(TiCopy, options),
             TiDeny: applyDefaultsToComponentProps(TiDeny, options),
             TiDownload: applyDefaultsToComponentProps(TiDownload, options),
             TiDuck: applyDefaultsToComponentProps(TiDuck, options),
@@ -432,6 +448,7 @@ import Ti from "./ti.vue"
             TiMenuVertical: applyDefaultsToComponentProps(TiMenuVertical, options),
             TiMinus: applyDefaultsToComponentProps(TiMinus, options),
             TiMinusCircle: applyDefaultsToComponentProps(TiMinusCircle, options),
+            TiMoon: applyDefaultsToComponentProps(TiMoon, options),
             TiPaperShredder: applyDefaultsToComponentProps(TiPaperShredder, options),
             TiPen: applyDefaultsToComponentProps(TiPen, options),
             TiPencil: applyDefaultsToComponentProps(TiPencil, options),
@@ -459,6 +476,7 @@ import Ti from "./ti.vue"
             TiStarHalf: applyDefaultsToComponentProps(TiStarHalf, options),
             TiStrike: applyDefaultsToComponentProps(TiStrike, options),
             TiSuccess: applyDefaultsToComponentProps(TiSuccess, options),
+            TiSun: applyDefaultsToComponentProps(TiSun, options),
             TiTags: applyDefaultsToComponentProps(TiTags, options),
             TiTimes: applyDefaultsToComponentProps(TiTimes, options),
             TiToe: applyDefaultsToComponentProps(TiToe, options),

@@ -11,15 +11,15 @@ export default {
   components: {
     Button,
     SearchBar,
-    IconsList
+    IconsList,
   },
 
   data() {
     return {
       searchTerm: "",
-      downloadLink: `https://api.github.com/repos/javisperez/toe-icons/zipball/v${VERSION}`
+      downloadLink: `https://api.github.com/repos/javisperez/toe-icons/zipball/v${VERSION}`,
     };
-  }
+  },
 };
 </script>
 
@@ -34,7 +34,7 @@ export default {
       </div>
     </div>
 
-    <SearchBar v-model="searchTerm" />
+    <SearchBar v-model:value="searchTerm" />
 
     <IconsList class="mt-16" :filterBy="searchTerm" />
   </div>

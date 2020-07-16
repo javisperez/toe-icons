@@ -1,8 +1,8 @@
 <template>
-  <div id="app" class="p-4 mx-auto max-w-6xl">
+  <div id="app" class="mx-auto max-w-6xl">
     <div
       id="nav"
-      class="flex border-b-2 border-blue-dark mb-8 sticky top-0 bg-white"
+      class="flex border-b-2 border-blue-dark mb-8 sticky top-0 bg-white p-2 justify-between"
     >
       <h1 class="m-0 text-base uppercase flex items-center">
         <router-link
@@ -12,12 +12,14 @@
           <ti-toe size="24" class="mr-1 text-cyan-500" />Toe Icons
         </router-link>
       </h1>
-      <a
-        href="https://www.github.com/javisperez/toe-icons"
-        class="flex items-center no-underline hover:underline ml-auto"
-      >
-        <ti-github size="18" class="mr-1" />Github
-      </a>
+      <div class="flex items-center">
+        <a
+          href="https://www.github.com/javisperez/toe-icons"
+          class="w-4 mr-2 inline-block"
+        >
+          <component :is="'ti-github'" size="24" />
+        </a>
+      </div>
     </div>
 
     <router-view />

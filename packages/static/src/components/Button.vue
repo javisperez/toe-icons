@@ -6,9 +6,9 @@ export default {
     variant: String,
     href: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -17,7 +17,11 @@ export default {
     class="ui-button px-4 py-2 rounded-lg flex text-base items-center"
     :class="[`ui-button-${variant}`, href ? 'ui-button-link' : '']"
   >
-    <a :href="href" class="no-underline text-white flex text-base items-center" v-if="href">
+    <a
+      :href="href"
+      class="no-underline text-white flex text-base items-center"
+      v-if="href"
+    >
       <slot />
     </a>
 

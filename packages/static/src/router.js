@@ -1,26 +1,23 @@
-import Vue from "vue";
-import Router from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./views/Home";
 import IconDetail from "./components/IconDetail";
 
-Vue.use(Router);
-
-export default new Router({
-  base: process.env.BASE_URL,
+export default createRouter({
+  history: createWebHashHistory(process.env.BASE_URL),
   routes: [
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
     },
     {
       path: "/icons",
-      redirect: "/"
+      redirect: "/",
     },
     {
       path: "/icons/:icon/:tab?",
       name: "icon-detail",
-      component: IconDetail
-    }
-  ]
+      component: IconDetail,
+    },
+  ],
 });

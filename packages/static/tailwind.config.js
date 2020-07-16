@@ -1,9 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.vue',
-  ],
+  purge: ["./src/**/*.html", "./src/**/*.vue"],
   theme: {
     extend: {
       colors: {
@@ -16,11 +13,11 @@ module.exports = {
           600: "#32ABB5",
           700: "#227279",
           800: "#19565A",
-          900: "#11393C"
-        }
-      }
-    }
+          900: "#11393C",
+        },
+      },
+    },
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};

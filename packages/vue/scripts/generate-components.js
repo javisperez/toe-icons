@@ -44,7 +44,7 @@ for(const icon in icons) {
 
   <template>
     <svg xmlns="http://www.w3.org/2000/svg" class="toe-icon ti ti-${icon}"
-      :class="{'spin': spin}" :width="size" :height="size"
+      :width="size" :height="size"
       viewBox="0 0 64 64" :fill="color" :stroke="strokeColor"
       :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round">
       ${content}
@@ -58,42 +58,10 @@ for(const icon in icons) {
   )
 }
 
-// The default base components
-const Ti = `<script>
-export default {
-  name: "Ti",
-
-  props: {
-    icon: { type: String, required: true },
-    size: { type: [String, Number], default: ${defaultPropsValues.size} },
-    spin: { type: Boolean, default: false },
-    color: { type: String, default: "${defaultPropsValues.color}" },
-    stroke: { type: [String, Number], default: "${defaultPropsValues.stroke}" },
-    strokeColor: { type: String, default: "${defaultPropsValues.strokeColor}" }
-  },
-}
-</script>
-<template>
-<component
-  :is="'ti-'+icon"
-  :size="size"
-  :stroke="stroke"
-  :color="color"
-  :stroke-color="strokeColor"
-  :spin="spin" />
-</template>`
-
-fs.writeFileSync(
-  path.resolve(__dirname, path.join(DIST_DIR, 'ti.vue')), Ti
-)
-
 // And the main index.js file
 fs.writeFileSync(
   path.resolve(__dirname, path.join(DIST_DIR, 'index.js')),
-  `import Ti from "./ti.vue"
-  export { Ti }
-
-  ${components.map(component => {
+  `${components.map(component => {
     const componentName = `Ti${pascalCase(component)}`
     return `
     import ${componentName} from "./${component}.vue"
@@ -108,7 +76,6 @@ fs.writeFileSync(
         props: {
           ...component.props,
           size: { type: [String, Number], default: defaults.size },
-          spin: { type: Boolean, default: false },
           color: { type: String, default: defaults.color },
           stroke: { type: [String, Number], default: defaults.stroke },
           strokeColor: { type: String, default: defaults.strokeColor }
@@ -118,19 +85,17 @@ fs.writeFileSync(
 
     // Vue Plugin
     export default {
-      install(Vue, overrides = {}) {
+      install(app, overrides = {}) {
         const options = {
           size: ${defaultPropsValues.size},
-          spin: false,
           stroke: ${defaultPropsValues.stroke},
           color: "${defaultPropsValues.color}",
           strokeColor: "${defaultPropsValues.strokeColor}",
           ...overrides
         }
 
-        Vue.mixin({
+        app.mixin({
           components: {
-            Ti: applyDefaultsToComponentProps(Ti, options),
             ${components.map(component => {
               const componentName = `Ti${pascalCase(component)}`
               return `${componentName}: applyDefaultsToComponentProps(${componentName}, options)`

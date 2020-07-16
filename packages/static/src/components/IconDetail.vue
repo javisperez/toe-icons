@@ -9,12 +9,13 @@ export default {
 
   components: {
     VueCodeHighlight,
-    IconPreview
+    IconPreview,
   },
 
   data() {
     return {
-      currentPreviewBg: null
+      currentPreviewBg: null,
+      svgCopied: false,
     };
   },
 
@@ -50,7 +51,7 @@ export default {
       }
 
       return uniq(related);
-    }
+    },
   },
 
   methods: {
@@ -61,8 +62,18 @@ export default {
       }
 
       this.currentPreviewBg = color;
-    }
-  }
+    },
+
+    copySvg() {
+      const textarea = document.createElement("textarea");
+      textarea.value = document.querySelector("#icon-preview").outerHTML;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      this.svgCopied = true;
+    },
+  },
 };
 </script>
 
@@ -74,7 +85,7 @@ export default {
     <div class="flex flex-col md:flex-row justify-between mb-32">
       <div class="w-full md:w-1/2">
         <div class="flex">
-          <span :is="`ti-${icon}`" size="28" />
+          <component :is="`ti-${icon}`" size="28" />
           <span class="uppercase font-semibold text-xl">
             {{ icon.replace(/-/g, " ") }}
           </span>
@@ -109,33 +120,47 @@ export default {
             'bg-blue-500': currentPreviewBg === 'blue',
             'bg-green-500': currentPreviewBg === 'green',
             'bg-black': currentPreviewBg === 'black',
-            'icon-preview-box': !currentPreviewBg
+            'icon-preview-box': !currentPreviewBg,
           }"
         >
-          <div :is="`ti-${icon}`" size="256" />
+          <component :is="`ti-${icon}`" size="256" id="icon-preview" />
         </div>
-        <ul class="flex justify-end w-full">
-          <li
-            class="w-4 h-4 cursor-pointer hover:bg-gray-100 bg-transparent border border-solid border-gray-400 mt-2 mr-2"
-            @click="togglePreviewBackground()"
-          ></li>
-          <li
-            class="w-4 h-4 cursor-pointer hover:bg-red-700 bg-red-500 mt-2 mr-2"
-            @click="togglePreviewBackground('red')"
-          ></li>
-          <li
-            class="w-4 h-4 cursor-pointer hover:bg-green-700 bg-green-500 mt-2 mr-2"
-            @click="togglePreviewBackground('green')"
-          ></li>
-          <li
-            class="w-4 h-4 cursor-pointer hover:bg-blue-700 bg-blue-500 mt-2 mr-2"
-            @click="togglePreviewBackground('blue')"
-          ></li>
-          <li
-            class="w-4 h-4 cursor-pointer hover:bg-black bg-gray-700 mt-2"
-            @click="togglePreviewBackground('black')"
-          ></li>
-        </ul>
+        <div class="flex justify-between items-center">
+          <div
+            class="cursor-pointer mt-1 px-2 py-1 rounded text-xs flex items-center font-semibold"
+            :class="{
+              'bg-blue-500 hover:bg-blue-700 text-white': !svgCopied,
+            }"
+            @click="copySvg"
+          >
+            <span>
+              <component :is="svgCopied ? 'TiSuccess' : 'TiCopy'" size="24" />
+            </span>
+            {{ svgCopied ? "Copied" : "Copy SVG" }}
+          </div>
+          <ul class="flex justify-end">
+            <li
+              class="w-4 h-4 cursor-pointer hover:bg-gray-100 bg-transparent border border-solid border-gray-400 mt-2 mr-2"
+              @click="togglePreviewBackground()"
+            ></li>
+            <li
+              class="w-4 h-4 cursor-pointer hover:bg-red-700 bg-red-500 mt-2 mr-2"
+              @click="togglePreviewBackground('red')"
+            ></li>
+            <li
+              class="w-4 h-4 cursor-pointer hover:bg-green-700 bg-green-500 mt-2 mr-2"
+              @click="togglePreviewBackground('green')"
+            ></li>
+            <li
+              class="w-4 h-4 cursor-pointer hover:bg-blue-700 bg-blue-500 mt-2 mr-2"
+              @click="togglePreviewBackground('blue')"
+            ></li>
+            <li
+              class="w-4 h-4 cursor-pointer hover:bg-black bg-gray-700 mt-2"
+              @click="togglePreviewBackground('black')"
+            ></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div v-if="tags">

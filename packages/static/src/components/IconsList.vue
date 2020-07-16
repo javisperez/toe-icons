@@ -9,17 +9,17 @@ export default {
   name: "icons-list",
 
   props: {
-    filterBy: String
+    filterBy: String,
   },
 
   components: {
-    IconPreview
+    IconPreview,
   },
 
   data() {
     return {
       iconsList,
-      version: VERSION
+      version: VERSION,
     };
   },
 
@@ -29,17 +29,17 @@ export default {
         return true;
       }
 
-      const terms = this.filterBy.split(" ").map(w => w.toLowerCase());
+      const terms = this.filterBy.split(" ").map((w) => w.toLowerCase());
       const tags = iconsTags[icon];
 
       return terms.some(
-        term => icon.includes(term) || tags.some(t => t.includes(term))
+        (term) => icon.includes(term) || tags.some((t) => t.includes(term))
       );
     },
 
     isActive(icon) {
       return this.$route.params.icon === icon;
-    }
+    },
   },
 
   computed: {
@@ -55,8 +55,8 @@ export default {
       }
 
       return filteredValues;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -69,9 +69,9 @@ export default {
         >
         {{ Object.keys(iconsList).length }} icons available
       </span>
-      <span class="text-sm text-black md:text-gray-400 hover:text-black"
-        >latest version: {{ version }}</span
-      >
+      <span class="text-sm md:text-gray-600">
+        latest version: {{ version }}
+      </span>
     </div>
 
     <div class="flex flex-wrap flex-col md:flex-row">

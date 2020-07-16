@@ -56,14 +56,13 @@ or use the plugin version:
 
 ```jsx
 import Vue from "vue"
-import Ti from "@toe-icons/vue"
-
-Vue.use(Ti, {
+import ToeIcons from "@toe-icons/vue"
+...
+app.use(ToeIcons, {
   size: 24
 })
 ...
-
-<ti icon="arrow-left" />
+<ti-arrow-down />
 
 ```
 
