@@ -34,7 +34,6 @@ for(const icon in icons) {
 
     props: {
       size: { type: [String, Number], default: ${defaultPropsValues.size} },
-      spin: { type: Boolean, default: false },
       color: { type: String, default: "${defaultPropsValues.color}" },
       stroke: { type: [String, Number], default: "${defaultPropsValues.stroke}" },
       strokeColor: { type: String, default: "${defaultPropsValues.strokeColor}" }

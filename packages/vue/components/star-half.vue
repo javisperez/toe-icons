@@ -4,7 +4,6 @@ export default {
 
   props: {
     size: { type: [String, Number], default: 24 },
-    spin: { type: Boolean, default: false },
     color: { type: String, default: "currentColor" },
     stroke: { type: [String, Number], default: "0" },
     strokeColor: { type: String, default: "currentColor" }

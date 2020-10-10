@@ -281,6 +281,18 @@
     import TiSidebarExpand from "./sidebar-expand.vue"
     export { TiSidebarExpand }
 
+    import TiSort from "./sort.vue"
+    export { TiSort }
+
+    import TiSortAsc from "./sort-asc.vue"
+    export { TiSortAsc }
+
+    import TiSortDesc from "./sort-desc.vue"
+    export { TiSortDesc }
+
+    import TiSortDisabled from "./sort-disabled.vue"
+    export { TiSortDisabled }
+
     import TiSpinner from "./spinner.vue"
     export { TiSpinner }
 
@@ -469,6 +481,10 @@
             TiSidebar2: applyDefaultsToComponentProps(TiSidebar2, options),
             TiSidebarCollapse: applyDefaultsToComponentProps(TiSidebarCollapse, options),
             TiSidebarExpand: applyDefaultsToComponentProps(TiSidebarExpand, options),
+            TiSort: applyDefaultsToComponentProps(TiSort, options),
+            TiSortAsc: applyDefaultsToComponentProps(TiSortAsc, options),
+            TiSortDesc: applyDefaultsToComponentProps(TiSortDesc, options),
+            TiSortDisabled: applyDefaultsToComponentProps(TiSortDisabled, options),
             TiSpinner: applyDefaultsToComponentProps(TiSpinner, options),
             TiSquare: applyDefaultsToComponentProps(TiSquare, options),
             TiStar: applyDefaultsToComponentProps(TiStar, options),

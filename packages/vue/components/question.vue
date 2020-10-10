@@ -4,7 +4,6 @@ export default {
 
   props: {
     size: { type: [String, Number], default: 24 },
-    spin: { type: Boolean, default: false },
     color: { type: String, default: "currentColor" },
     stroke: { type: [String, Number], default: "0" },
     strokeColor: { type: String, default: "currentColor" }
@@ -17,6 +16,6 @@ export default {
     :width="size" :height="size"
     viewBox="0 0 64 64" :fill="color" :stroke="strokeColor"
     :stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round">
-    <text x="16.428" y="55.622" font-family="&apos;Roboto-Regular&apos;,&apos;Roboto&apos;" font-size="66.109">?</text>
+    <path d="M27.952 42.387c.043-2.56.333-4.583.871-6.068.538-1.485 1.636-3.131 3.293-4.939l4.229-4.358c1.807-2.044 2.711-4.239 2.711-6.585 0-2.259-.592-4.029-1.775-5.31-1.184-1.28-2.905-1.92-5.165-1.92-2.195 0-3.96.581-5.294 1.743-1.334 1.162-2.001 2.722-2.001 4.68h-5.972c.043-3.486 1.286-6.3 3.728-8.441 2.443-2.141 5.622-3.212 9.539-3.212 4.067 0 7.236 1.092 9.506 3.277 2.271 2.184 3.406 5.181 3.406 8.99 0 3.765-1.743 7.478-5.229 11.136l-3.519 3.486c-1.571 1.743-2.356 4.25-2.356 7.521h-5.972zm-.258 10.233c0-.968.296-1.781.887-2.437.592-.656 1.469-.985 2.631-.985 1.162 0 2.045.329 2.647.985.603.656.904 1.469.904 2.437 0 .969-.301 1.77-.904 2.405-.602.635-1.485.952-2.647.952-1.162 0-2.039-.317-2.631-.952-.591-.635-.887-1.436-.887-2.405z" fill-rule="nonzero"></path>
   </svg>
 </template>

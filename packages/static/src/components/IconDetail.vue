@@ -66,7 +66,10 @@ export default {
 
     copySvg() {
       const textarea = document.createElement("textarea");
-      textarea.value = document.querySelector("#icon-preview").outerHTML;
+      textarea.value = document
+        .querySelector("#icon-preview")
+        .outerHTML.replace('width="256" height="256"', 'width="24" height="24"')
+        .replace('id="icon-preview"', "");
       document.body.appendChild(textarea);
       textarea.select();
       document.execCommand("copy");
