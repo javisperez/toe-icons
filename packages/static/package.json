@@ -1,6 +1,6 @@
 {
   "name": "@toe-icons/static",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "scripts": {
     "serve": "cd ../../ && npm run build && cd packages/static && vue-cli-service serve",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
-    "@toe-icons/icons": "^1.2.1",
-    "@toe-icons/vue": "^1.2.1",
+    "@toe-icons/icons": "^1.2.2",
+    "@toe-icons/vue": "^1.2.2",
     "@vue/composition-api": "^0.6.1",
     "core-js": "^3.6.5",
     "tailwindcss": "^1.4.6",
