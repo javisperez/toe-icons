@@ -40,7 +40,7 @@
     "eslint-plugin-vue": "^7.0.0-alpha.0",
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^2.0.5",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vue-next": "~0.1.3"
